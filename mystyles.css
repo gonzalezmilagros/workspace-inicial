@@ -1,0 +1,120 @@
+body,html{
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    position: relative; 
+    background-color: #F8F9FB
+  }
+  
+  .login{
+    border: 0px solid #E1E1E1;
+    border-radius: 5px;
+    padding: 40px;
+    width: 350px;
+    position: relative;
+    top: 25%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  
+  .container1{
+     position: relative;
+     left: 40%;
+     top: 7%;
+     bottom: 45%;
+     padding-bottom: 1%;
+  }
+  
+  img {
+    max-width: 200%;
+    max-height: 200%;
+   }
+   .login-img {
+    height: 200px;
+    width: 200px;
+    position: relative;
+    top: 25%;
+    left: 42%;
+    transform: translate(-50%, -50%);
+   }
+  
+   input[type=email], input[type=password] {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 10px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+  }
+  
+  button {
+    background-color: #04AA6D;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+  }
+  
+  button:hover {
+    opacity: 0.8;
+  }
+  /* PRODUCTS */
+  
+  body{
+    font-family: 'Raleway', serif !important;
+  }
+  
+  .card-lista-productos{
+   width: 90%;
+   display: flex;
+   max-width: 90%;
+   display: flex;
+   border: 1px solid #cacaca; 
+   border-radius: 5px;
+   margin: 0px 10px 0px 10px;
+   padding: 5px;
+  }
+  
+  .card-lista-productos:hover{
+    opacity: 0.9;
+  }
+  
+  
+  .img-autos{
+    position: relative;
+    height: 200px;
+    width: 290px;
+    border: 1px double #cacaca;
+    border-radius: 5px;
+    margin: 5px 15px 5px 15px;
+    padding: 4px;
+  }
+  
+  .productos-descripcion{
+    font-size: 16px;
+    margin-top: 5px;
+  }
+  
+  .titulo-lista-productos{
+    font-family: 'Raleway', serif !important;
+    font-size: 23px;
+    margin-top: 10px;
+  }
+  
+  .cantidad-vendidos-lista-productos{
+    padding-left: 9%;
+  }
+  
+  .h4-titulo-productos{
+    font-family: 'Raleway', serif !important;
+    font-size: calc(1.325rem + .9vw);
+  }
+  
+  .p-subtitulo{
+    font-family: 'Raleway', serif !important;
+    font-size: 20px;
+  }
+  

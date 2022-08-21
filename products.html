@@ -10,6 +10,7 @@
   <link href="css/font-awesome.min.css" rel="stylesheet">
   <link href="css/bootstrap.min.css" rel="stylesheet">
   <link href="css/styles.css" rel="stylesheet">
+  <link rel="stylesheet" href="mystyles.css">
 </head>
 
 <body>
@@ -22,7 +23,7 @@
       <div class="collapse navbar-collapse" id="navbarNav">
         <ul class="navbar-nav w-100 justify-content-between">
           <li class="nav-item">
-            <a class="nav-link" href="index.html">Inicio</a>
+            <a class="nav-link" href="inicio.html">Inicio</a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="categories.html">Categorías</a>
@@ -36,11 +37,23 @@
       </div>
     </div>
   </nav>
-  <main class="pb-5 container">
+  <main class="products">
+
+    <div class="text-center p-4" id="title">
+      <h4 class="h4-titulo-productos">Productos</h4>
+        <p class="p-subtitulo">Aquí encontraras todos los productos de la categoría <strong>Autos</strong></p>
+    </div>
+    <div id="listado">
+      <p>
+        <ul id="productos"></ul>
+      </p>
+    </div>
     <div class="container">
-      <div class="alert alert-danger text-center" role="alert">
-        <h4 class="alert-heading">Funcionalidad en desarrollo</h4>
-      </div>
+        <div class="row">
+            <div class="list-group" id="cat-list-container">
+  
+            </div>
+        </div>
     </div>
   </main>
   <footer class="text-muted">
