@@ -12,7 +12,7 @@ boton.addEventListener("click", function(){
 
 
 function myFunction() {
-    location.replace("http://127.0.0.1:5500/inicio.html")
+    location.replace("file:///C:/Users/Milagros/Documents/workspace-inicial/workspace-inicial/inicio.html")
   }
 
 
