@@ -19,3 +19,21 @@ function myFunction() {
   function validacion(){
     alert("los datos ingresados no son válidos")
   }
+
+  // function guardarEmail(){
+  //    let usuario = {
+  //     usuario: document.getElementById("email").value
+  //    };
+
+  //    localStorage.setItem("usuario", email);
+  //   //  console.log(localStorage);
+  // }
+
+  // function mostrarEmail(){
+     
+  //   localStorage.getItem("email");
+
+  //   document.getElementById("datos-usuario").innerHTML = usuario
+  // }
+
+  // console.log(mostrarEmail);
