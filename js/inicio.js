@@ -12,3 +12,17 @@ document.addEventListener("DOMContentLoaded", function(){
         window.location = "products.html"
     });
 });
+
+function mostrarDatos(){
+    if(localStorage.getItem("email")){
+        usuario_json = localStorage.getItem("email");
+        email = JSON.parse(usuario_json);
+
+        document.getElementById("datos-usuario").innerHTML =
+           "usuario: " + email + "<br>"; 
+    }
+}
+
+mostrarDatos();
+ 
+
