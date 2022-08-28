@@ -19,7 +19,7 @@ function mostrarDatos(){
         email = JSON.parse(usuario_json);
 
         document.getElementById("datos-usuario").innerHTML =
-           "usuario: " + email + "<br>"; 
+           email; 
     }
 }
 
