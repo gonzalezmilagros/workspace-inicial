@@ -43,30 +43,47 @@
 
     <div class="text-center p-4" id="title">
       <h4 class="h4-titulo-productos">Productos</h4>
-        <p class="p-subtitulo">Aquí encontraras todos los productos de la categoría </p>
+        <p class="p-subtitulo">Aquí encontraras todos los productos de la categoría</p>
     </div>
 
-  <nav id="filtros">
+  <!-- <nav id="filtros">
 
-    <div id="orden-precio-relevancia" class="o-pr">
-       <button id="precio-descendiente" class="p-d">boton</button>
-       <button id="precio-ascendente" class="p-a">boton</button>
-       <button id="relevancia-descendiente" class="r-d">boton</button>
+    <div class="btn filtros-precio-relevancia">
+      <input type="radio" class="btn-pd" name="options" id="p-descendiente">
+      <label class="btn-orden" for="p-descendiente">P</label>
+      <input type="radio" class="btn-pa" name="options" id="p-ascendente">
+      <label class="btn-orden" for="p-ascendente">P</label>
+      <input type="radio" class="btn-rd" name="options" id="r-descendiente" checked>
+      <label class="btn btn-light" for="r-descendiente">R</label>
     </div>
-     
-  </nav>
+    <div class="filtro-precio">
+      <div class="filtro-cantidad">
+        <p class="price-quantity">Precio</p>
+      </div>
+      <div class="filtro-min-max">
+        <input class="cant-precio" type="number" placeholder="min." id="rangoFiltroMenor">
+      </div>
+      <div class="filtro-min-max">
+        <input class="cant-precio" type="number" placeholder="máx." id="rangoFiltroMayor">
+      </div>
+      <div class="filtrar-limpiar">
+        <div class="btn-group" role="group">
+          <button class="btn-filtrar" id="rangoFiltro">Filtrar</button>
+          <button class="btn-limpiar-filtro" id="limpiarFiltro">Limpiar</button>
+        </div>
+      </div>
+    </div>
+  </nav> -->
 
+  <input type="number" id="rango-min" placeholder="min">
+  <input type="number" id="rango-max" placeholder="max">
+
+  <button id="filtrar">Filtrar</button>
+  <button id="limpiar">Limpiar</button>
     <div id="listado">
       <p>
         <ul id="productos"></ul>
       </p>
-    </div>
-    <div class="container">
-        <div class="row">
-            <div class="list-group" id="cat-list-container">
-  
-            </div>
-        </div>
     </div>
   </main>
   <footer class="text-muted">
