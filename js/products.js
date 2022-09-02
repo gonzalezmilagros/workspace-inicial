@@ -63,6 +63,26 @@ document.addEventListener("DOMContentLoaded", function () {
         
     })
 
+    document.getElementById("sortPrecioDesc").addEventListener("click", function(){
+        listaProductos.sort(function (a, b) {
+            return parseInt(b.cost) - parseInt(a.cost);
+        })
+        mostrarProductos(listaProductos);
+    })
+
+    document.getElementById("sortPrecioAsc").addEventListener("click", function(){
+        listaProductos.sort(function (a, b) {
+            return parseInt(a.cost) - parseInt(b.cost);
+        })
+        mostrarProductos(listaProductos);
+    })
+
+    document.getElementById("sortRelevDesc").addEventListener("click", function(){
+        listaProductos.sort(function (a, b) {
+            return parseInt(b.soldCount) - parseInt(a.soldCount );
+        })
+        mostrarProductos(listaProductos);
+    })
 })
 
 

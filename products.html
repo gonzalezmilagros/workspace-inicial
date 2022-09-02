@@ -46,40 +46,21 @@
         <p class="p-subtitulo">Aquí encontraras todos los productos de la categoría</p>
     </div>
 
-  <!-- <nav id="filtros">
+<div id="filtros">
+  <div id="ordenar">
+    <input type="radio" id="sortPrecioDesc" class="button-orden"><label for="" class="estilo-img"><img src="img/descendente-flecha.png" alt="">$</label>
+    <input type="radio" id="sortPrecioAsc" class="button-orden"><label for="" class="estilo-img"><img src="img/ascendente-flecha.png" alt="">$</label>
+    <input type="radio" id="sortRelevDesc" class="button-orden"><label for="" class="estilo-img"><img src="img/descendente-flecha.png" alt="">Rel.</label>
+ </div>
+   <div id="precio">
+    <p class="price">Precio</p>
+      <input type="number" id="rango-min" placeholder="min" class="min-max">
+      <input type="number" id="rango-max" placeholder="max" class="min-max">
 
-    <div class="btn filtros-precio-relevancia">
-      <input type="radio" class="btn-pd" name="options" id="p-descendiente">
-      <label class="btn-orden" for="p-descendiente">P</label>
-      <input type="radio" class="btn-pa" name="options" id="p-ascendente">
-      <label class="btn-orden" for="p-ascendente">P</label>
-      <input type="radio" class="btn-rd" name="options" id="r-descendiente" checked>
-      <label class="btn btn-light" for="r-descendiente">R</label>
-    </div>
-    <div class="filtro-precio">
-      <div class="filtro-cantidad">
-        <p class="price-quantity">Precio</p>
-      </div>
-      <div class="filtro-min-max">
-        <input class="cant-precio" type="number" placeholder="min." id="rangoFiltroMenor">
-      </div>
-      <div class="filtro-min-max">
-        <input class="cant-precio" type="number" placeholder="máx." id="rangoFiltroMayor">
-      </div>
-      <div class="filtrar-limpiar">
-        <div class="btn-group" role="group">
-          <button class="btn-filtrar" id="rangoFiltro">Filtrar</button>
-          <button class="btn-limpiar-filtro" id="limpiarFiltro">Limpiar</button>
-        </div>
-      </div>
-    </div>
-  </nav> -->
-
-  <input type="number" id="rango-min" placeholder="min">
-  <input type="number" id="rango-max" placeholder="max">
-
-  <button id="filtrar">Filtrar</button>
-  <button id="limpiar">Limpiar</button>
+      <button id="filtrar" class="btn-controles">Filtrar</button>
+  <button id="limpiar" class="btn-controles">Limpiar</button>
+   </div>
+</div>
     <div id="listado">
       <p>
         <ul id="productos"></ul>
