@@ -79,7 +79,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
     document.getElementById("sortRelevDesc").addEventListener("click", function(){
         listaProductos.sort(function (a, b) {
-            return parseInt(b.soldCount) - parseInt(a.soldCount );
+            return parseInt(b.soldCount) - parseInt(a.soldCount);
         })
         mostrarProductos(listaProductos);
     })
