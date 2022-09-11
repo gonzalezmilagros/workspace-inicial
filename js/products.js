@@ -2,6 +2,11 @@ let listaProductos = []
 let min = undefined //no está definida, o sea no está inicializada//
 let max = undefined
 
+function infoProducts(id){
+    localStorage.setItem("ProductID", id);
+    window.location = "product-info.html"
+}
+
 function mostrarProductos(arrayProductos) {
     document.getElementById("productos").innerHTML = "";
     for (const producto of arrayProductos) {
@@ -9,11 +14,11 @@ function mostrarProductos(arrayProductos) {
         if ((min == undefined && max == undefined) || (producto.cost >= min && producto.cost <= max) ||
         (producto.cost >= min && max == undefined) || (producto.cost <= max && min == undefined)) {
             let contenido = `
-        <ul>
+        <ul onclick="infoProducts(${producto.id})">
             <div class="container-lista-productos">
                 <div class="card-lista-productos">
                     <div class="img-lista-productos">
-                           <img class="img-autos" src="${producto.image}" alt="${producto.id}">
+                           <img class="img-autos" src="${producto.image}" alt="">
                      </div>
                      <div class="titulo-lista-productos">
                             ${producto.name}
