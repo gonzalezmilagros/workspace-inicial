@@ -3,7 +3,7 @@ let min = undefined //no está definida, o sea no está inicializada//
 let max = undefined
 
 function infoProducts(id){
-    localStorage.setItem("ProductID", id);
+    localStorage.setItem("InfoID", id);
     window.location = "product-info.html"
 }
 
