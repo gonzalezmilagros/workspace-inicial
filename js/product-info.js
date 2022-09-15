@@ -1,6 +1,8 @@
 let dato1;
 let dato2;
 
+
+// No se como llamarle a esto, pero vamos a decir que se le atribuye a a los numeros lo que se debe imprimir en pantalla
 star = {
   datos : false,
 1:`<span class="fa fa-star checked"></span>
@@ -31,6 +33,8 @@ star = {
 }
 
 function showEverything(arrayComentarios){
+
+    // Con innerHTML se imprime los objetos del json
    
     document.getElementById("product-name").innerHTML = " " + dato1.name; 
         document.getElementById("product-cost").innerHTML = "Precio " + dato1.currency + dato1.cost;
@@ -39,6 +43,8 @@ function showEverything(arrayComentarios){
         document.getElementById("product-soldCount").innerHTML = "Cantidad de vendidos " + dato1.soldCount;
      
         // Aquí tenes que poner las imagenes pedazo de gila, porfis hacelo antes del domingo!!!
+
+        // Se recorre el array y se imprime los elementos del mismo
 
         let htmlContentToAppend = "";
     for(let i = 0; i < dato2.length; i++){
