@@ -43,13 +43,25 @@
   <main>
     <div id="listada-info">
       <p>
-        <p id="product-name"></p>
+        <h3 id="product-name"></h3>
         <p id="product-cost"></p>
         <p id="product-description"></p>
         <p id="product-category"></p>
         <p id="product-soldCount"></p>
-        <ul id="images"></ul>
+        <ul id="images" class="img-info"></ul>
       </p>
+    </div>
+    <div id="feedback-product">
+       <h3>Comentarios</h3>
+       <ul id="comentarios"></ul>
+    </div>
+    <div id="comentar">
+      <h3>Comentar</h3>
+      <p>Tu opinió</p>
+      <input type="text" id="opinion">
+      <p>Tu puntuación</p>
+      <input type="number" min="1" max="5"> <br>
+      <button id="submit">Enviar</button>
     </div>
   </main>
   <footer class="text-muted">

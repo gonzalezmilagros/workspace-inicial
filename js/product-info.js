@@ -1,34 +1,72 @@
-// let listaInfo = []
-// arrayInfo;
+let dato1;
+let dato2;
+
+star = {
+  datos : false,
+1:`<span class="fa fa-star checked"></span>
+   <span class="fa fa-star"></span>
+   <span class="fa fa-star"></span>
+   <span class="fa fa-star"></span>
+   <span class="fa fa-star"></span>`,
+2:`<span class="fa fa-star checked"></span>
+   <span class="fa fa-star checked"></span>
+   <span class="fa fa-star"></span>
+   <span class="fa fa-star"></span>
+   <span class="fa fa-star"></span>`,
+3:`<span class="fa fa-star checked"></span>
+   <span class="fa fa-star checked"></span>
+   <span class="fa fa-star checked"></span>
+   <span class="fa fa-star"></span>
+   <span class="fa fa-star"></span>`,
+4:`<span class="fa fa-star checked"></span>
+   <span class="fa fa-star checked"></span>
+   <span class="fa fa-star checked"></span>
+   <span class="fa fa-star checked"></span>
+   <span class="fa fa-star"></span>`,
+5:`<span class="fa fa-star checked"></span>
+   <span class="fa fa-star checked"></span>
+   <span class="fa fa-star checked"></span>
+   <span class="fa fa-star checked"></span>
+   <span class="fa fa-star checked"></span>`,
+}
+
+function showEverything(arrayComentarios){
+   
+    document.getElementById("product-name").innerHTML = " " + dato1.name; 
+        document.getElementById("product-cost").innerHTML = "Precio " + dato1.currency + dato1.cost;
+        document.getElementById("product-description").innerHTML = "Descripción " + dato1.description;
+        document.getElementById("product-category").innerHTML = "Categoría " + dato1.category;
+        document.getElementById("product-soldCount").innerHTML = "Cantidad de vendidos " + dato1.soldCount;
+     
+        // Aquí tenes que poner las imagenes pedazo de gila, porfis hacelo antes del domingo!!!
+
+        let htmlContentToAppend = "";
+    for(let i = 0; i < dato2.length; i++){
+        let comment = dato2[i];
+
+            htmlContentToAppend += `
+            ${comment.user}  ${comment.dateTime}  ${star[comment.score]} <br>
+            ${comment.description} <br><br>
+            `
+        }
+
+        document.getElementById("comentarios").innerHTML = htmlContentToAppend;
+    }
 
 
-// function showProductInfo() {
-//     document.getElementById("product-info").innerHTML = "Nombre: " + data.name;
-//  }
-       
-
-
-// document.addEventListener("DOMContentLoaded", function () {
-//     getJSONData(PRODUCT_INFO_URL + localStorage.getItem("InfoID") + EXT_TYPE).then(resultado => {
-//         if (resultado.status == "ok") {
-//             listaInfo = resultado.data;
-//             showProductInfo(listaInfo);
-//         } else {
-//             alert("algo salió mal: " + resultado.data)
-//         }
-//     });
-// })
 
 fetch(PRODUCT_INFO_URL + localStorage.getItem("InfoID") + EXT_TYPE)
      .then(respuesta => respuesta.json())
-     .then(datos =>{
+     .then(result1 => {
+        dato1 = result1;
+        showEverything()
+})
 
-        document.getElementById("product-name").innerHTML = " " + datos.name; 
-        document.getElementById("product-cost").innerHTML = "Precio " + datos.currency + datos.cost;
-        document.getElementById("product-description").innerHTML = "Descripción " + datos.description;
-        document.getElementById("product-category").innerHTML = "Categoría " + datos.category;
-        document.getElementById("product-soldCount").innerHTML = "Cantidad de vendidos " + datos.soldCount;
-        document.getElementById("images").innerHTML = " " + datos.images[0];
+fetch(PRODUCT_INFO_COMMENTS_URL + localStorage.getItem("InfoID") + EXT_TYPE)
+        .then(respuesta => respuesta.json())
+        .then(result2 => {
+            console.log(result2);
+            dato2 = result2;
+            showEverything()
+        })
 
-        
-     })
