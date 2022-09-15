@@ -10,6 +10,7 @@
   <link href="css/font-awesome.min.css" rel="stylesheet">
   <link href="css/bootstrap.min.css" rel="stylesheet">
   <link href="css/styles.css" rel="stylesheet">
+  <link rel="stylesheet" href="mystyles.css">
 </head>
 
 <body>
@@ -30,6 +31,9 @@
           <li class="nav-item">
             <a class="nav-link" href="sell.html">Vender</a>
           </li>
+        </li>
+        <li id="datos-usuario" class="usuario"> 
+        </li>
           <li class="nav-item">
           </li>
         </ul>
@@ -39,7 +43,12 @@
   <main>
     <div id="listada-info">
       <p>
-        <li id="products-info"></li>
+        <p id="product-name"></p>
+        <p id="product-cost"></p>
+        <p id="product-description"></p>
+        <p id="product-category"></p>
+        <p id="product-soldCount"></p>
+        <ul id="images"></ul>
       </p>
     </div>
   </main>
@@ -64,6 +73,7 @@
   <script src="js/bootstrap.bundle.min.js"></script>
   <script src="js/init.js"></script>
   <script src="js/product-info.js"></script>
+  <script src="js/inicio.js"></script>
 </body>
 
 </html>

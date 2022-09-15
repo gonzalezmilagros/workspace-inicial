@@ -14,7 +14,7 @@ function mostrarProductos(arrayProductos) {
         if ((min == undefined && max == undefined) || (producto.cost >= min && producto.cost <= max) ||
         (producto.cost >= min && max == undefined) || (producto.cost <= max && min == undefined)) {
             let contenido = `
-        <ul onclick="infoProducts(${producto.id})">
+        <ul onclick="infoProducts(${producto.id})"> 
             <div class="container-lista-productos">
                 <div class="card-lista-productos">
                     <div class="img-lista-productos">
@@ -50,7 +50,7 @@ document.addEventListener("DOMContentLoaded", function () {
         } else {
             alert("algo salió mal: " + resultado.data.products)
         }
-    })
+    });
 
 
     document.getElementById("filtrar").addEventListener("click", function(){
