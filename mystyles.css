@@ -174,6 +174,12 @@ body,html{
   position: relative; top: 30px;
 }
 
+/* INFO DE PRODUCTO */
+
+.t-info{
+  display: flex;
+  justify-content: center;
+}
 
 .checked {
   color: orange;
