@@ -1,5 +1,6 @@
 let dato1;
 let dato2;
+let arrayImg= [];
 
 
 
@@ -46,7 +47,7 @@ for(let i = 0; i < dato2.length; i++){
        ${comment.description} <br><br>
        `
    }
-
+   
    document.getElementById("comentarios").innerHTML = htmlContentToAppend;
 }
 
@@ -63,18 +64,17 @@ function showInfo(){
 
       //Recorremos el array e imprimimos las imagenes en pantalla.
 
-
-      // for(let imagen of dato1.images){
-      //    let img = `
-      //    <div>
-      //        <div>`+ imagen.images[0] +`</div>
-      //        <div>`+ imagen.images[1] +`</div>
-      //        <div>`+ imagen.images[2] +`</div>
-      //        <div>`+ imagen.images[3] +`</div>
-      //    </div>    
-      //    `;
-      //    document.getElementById("images").innerHTML += img;
-      // }
+      let img = "";
+      for(let i=0; i < dato1.length; i++){
+         let imagen = dato1[i];
+         img += `
+         <di>
+         <img src="${imagen.images[i]}" alt="" class"img">
+         </div>
+         `
+      }
+      console.log(dato1);
+      document.getElementById("images").innerHTML += img;
 }
    
 
@@ -84,7 +84,7 @@ fetch(PRODUCT_INFO_URL + localStorage.getItem("InfoID") + EXT_TYPE)
      .then(respuesta => respuesta.json())
      .then(result1 => {
         dato1 = result1;
-        console.log(result1);
+      //   console.log(result1);
         fetch(PRODUCT_INFO_COMMENTS_URL + localStorage.getItem("InfoID") + EXT_TYPE)
             .then(respuesta => respuesta.json())
             .then(result2 => {
