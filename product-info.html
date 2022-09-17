@@ -42,27 +42,33 @@
   </nav>
   <main>
     <div id="listada-info">
-        <h3 id="product-name" class="t-info t-name"></h3>
-        <h4 class="">Precio:</h4>
+        <h4 id="product-name" class="t-info t-name"></h4>
+        <h5 class="sub-info">Precio:</h5>
         <p id="product-cost" class="t-info"></p>
-        <h4>Descripción:</h4>
+        <h5 class="sub-info">Descripción:</h5>
         <p id="product-description"class="t-info"></p>
-        <h4>Categoría:</h4>
+        <h5 class="sub-info">Categoría:</h5>
         <p id="product-category" class="t-info"></p>
-        <h4>Cantidad de vendidos:</h4>
+        <h5 class="sub-info">Cantidad de vendidos:</h5>
         <p id="product-soldCount" class="t-info"></p>
-        <ul id="images" class="img-info" class="t-info"></ul>
+        <h5 class="sub-info">Imagenes ilustrativas:</h5>
+        <div id="imagenes-info">
+        <div id="imagenes0"class="img-info"></div>
+        <div id="imagenes1"class="img-info"></div>
+        <div id="imagenes2"class="img-info"></div>
+        <div id="imagenes3"class="img-info"></div>
+        </div>
     </div>
     <div id="feedback-product">
-       <h3>Comentarios</h3>
+       <h3 id="t-comment">Comentarios</h3>
        <ul id="comentarios"></ul>
     </div>
     <div id="comentar">
       <h3>Comentar</h3>
-      <p>Tu opinió</p>
+      <p>Tu opinión</p>
       <input type="text" id="opinion">
       <p>Tu puntuación</p>
-      <input type="number" min="1" max="5"> <br>
+      <input type="number" min="1" max="5" id="puntuacion"> <br><br>
       <button id="submit">Enviar</button>
     </div>
   </main>

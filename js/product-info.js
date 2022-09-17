@@ -4,7 +4,7 @@ let arrayImg= [];
 
 
 
-// No se como llamarle a esto, pero vamos a decir que se le atribuye  a los numeros lo que se debe imprimir en pantalla
+// No se como llamarle a esto, pero vamos a decir que se le atribuye a los numeros lo que se debe imprimir en pantalla
 star = {
   datos : false,
 1:`<span class="fa fa-star checked"></span>
@@ -43,8 +43,10 @@ for(let i = 0; i < dato2.length; i++){
    let comment = dato2[i];
 
        htmlContentToAppend += `
+       <div id="card-comment">
        ${comment.user}  ${comment.dateTime}  ${star[comment.score]} <br>
        ${comment.description} <br><br>
+       </div>
        `
    }
    
@@ -62,19 +64,25 @@ function showInfo(){
         document.getElementById("product-category").innerHTML = " " + dato1.category;
         document.getElementById("product-soldCount").innerHTML = " " + dato1.soldCount;
 
+      //   Mostrar imagenes!
+        document.getElementById("imagenes0").innerHTML = " " + `<img src="${dato1.images[0]}" alt=""></img>`
+        document.getElementById("imagenes1").innerHTML = " " + `<img src="${dato1.images[1]}" alt=""></img>`
+        document.getElementById("imagenes2").innerHTML = " " + `<img src="${dato1.images[2]}" alt=""></img>`
+        document.getElementById("imagenes3").innerHTML = " " + `<img src="${dato1.images[3]}" alt=""></img>`
+
       //Recorremos el array e imprimimos las imagenes en pantalla.
 
-      let img = "";
-      for(let i=0; i < dato1.length; i++){
-         let imagen = dato1[i];
-         img += `
-         <di>
-         <img src="${imagen.images[i]}" alt="" class"img">
-         </div>
-         `
-      }
-      console.log(dato1);
-      document.getElementById("images").innerHTML += img;
+      // let img = "";
+      // for(let i=0; i < dato1.images.length; i++){
+      //    let img = images[i];
+      //    img += `
+      //    <di>
+      //    <img src="${dato1.images[i]}" alt="" class"img">
+      //    </div>
+      //    `
+      // }
+      // console.log(images);
+      // document.getElementById("imagenes").innerHTML += images;
 }
    
 
