@@ -1,6 +1,6 @@
 let dato1;
 let dato2;
-let arrayImg= [];
+let arrayImg = "dato1.images";
 
 
 
@@ -51,6 +51,7 @@ for(let i = 0; i < dato2.length; i++){
    }
    
    document.getElementById("comentarios").innerHTML = htmlContentToAppend;
+   
 }
 
 
@@ -65,24 +66,22 @@ function showInfo(){
         document.getElementById("product-soldCount").innerHTML = " " + dato1.soldCount;
 
       //   Mostrar imagenes!
-        document.getElementById("imagenes0").innerHTML = " " + `<img src="${dato1.images[0]}" alt=""></img>`
-        document.getElementById("imagenes1").innerHTML = " " + `<img src="${dato1.images[1]}" alt=""></img>`
-        document.getElementById("imagenes2").innerHTML = " " + `<img src="${dato1.images[2]}" alt=""></img>`
-        document.getElementById("imagenes3").innerHTML = " " + `<img src="${dato1.images[3]}" alt=""></img>`
+      //   document.getElementById("imagenes0").innerHTML = " " + `<img src="${dato1.images[0]}" alt=""></img>`
+      //   document.getElementById("imagenes1").innerHTML = " " + `<img src="${dato1.images[1]}" alt=""></img>`
+      //   document.getElementById("imagenes2").innerHTML = " " + `<img src="${dato1.images[2]}" alt=""></img>`
+      //   document.getElementById("imagenes3").innerHTML = " " + `<img src="${dato1.images[3]}" alt=""></img>`
 
-      //Recorremos el array e imprimimos las imagenes en pantalla.
-
-      // let img = "";
-      // for(let i=0; i < dato1.images.length; i++){
-      //    let img = images[i];
-      //    img += `
-      //    <di>
-      //    <img src="${dato1.images[i]}" alt="" class"img">
-      //    </div>
-      //    `
-      // }
-      // console.log(images);
-      // document.getElementById("imagenes").innerHTML += images;
+      // Recorremos el array e imprimimos las imagenes en pantalla.
+       let htmlImagenes = "";
+      for(let j=0; j < arrayImg.length; j++){
+         htmlImagenes += `
+         <div class="col">
+         <img src="${arrayImg[j]}" alt="" class"img">
+         </div>
+         `
+      }
+      document.getElementById("imagenes-info").innerHTML += htmlImagenes;
+      console.log(arrayImg);
 }
    
 
