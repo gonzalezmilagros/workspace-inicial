@@ -18,11 +18,30 @@ function mostrarDatos(){
         usuario_json = localStorage.getItem("email");
         email = JSON.parse(usuario_json);
 
-        document.getElementById("datos-usuario").innerHTML =
-           email; 
+        document.getElementById("datos-usuario").innerHTML = email; 
     }
 }
 
 mostrarDatos();
+
+let cierre = document.getElementById("Sign-off");
+
+cierre.addEventListener("click", function(){
+      location.replace("index.html")
+  })
+
+let carrito = document.getElementById("cart");
+
+carrito.addEventListener("click", function(){
+        location.replace("cart.html")
+    })
+
+let perfil = document.getElementById("profile");
+
+cierre.addEventListener("click", function(){
+          location.replace("my-profile.html")
+      })
+    
+  
  
 

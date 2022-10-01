@@ -30,8 +30,14 @@
           <li class="nav-item">
             <a class="nav-link active" href="sell.html">Vender</a>
           </li>
-          <li id="datos-usuario" class="usuario"> 
-          </li>
+          <div class="dropdown">
+            <button class="btn btn-secondary dropdown-toggle usuario " type="button" id="datos-usuario" data-bs-toggle="dropdown" aria-expanded="false"></button>
+            <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+              <li><a id="cart" class="dropdown-item" href="#">Mi carrito</a></li>
+              <li><a id="profile" class="dropdown-item" href="#">Mi perfil</a></li>
+              <li><a id="Sign-off" class="dropdown-item" href="#">Cerrar sesión</a></li>
+            </ul>
+          </div>
           <li class="nav-item">
           </li>
         </ul>

@@ -1,10 +1,9 @@
 let dato1;
 let dato2;
-let arrayImg = "dato1.images";
+let arrayImg = [];
 
 
-
-// No se como llamarle a esto, pero vamos a decir que se le atribuye a los numeros lo que se debe imprimir en pantalla
+// se le atribuye a los numeros la cantidad de estrella que se deben mostrar en pantalla.
 star = {
   datos : false,
 1:`<span class="fa fa-star checked"></span>
@@ -36,6 +35,8 @@ star = {
 
 function showComments(){
 
+   
+
    // Se recorre el array y se muestran los comentarios de los productos
 
    let htmlContentToAppend = "";
@@ -66,23 +67,39 @@ function showInfo(){
         document.getElementById("product-soldCount").innerHTML = " " + dato1.soldCount;
 
       //   Mostrar imagenes!
-      //   document.getElementById("imagenes0").innerHTML = " " + `<img src="${dato1.images[0]}" alt=""></img>`
-      //   document.getElementById("imagenes1").innerHTML = " " + `<img src="${dato1.images[1]}" alt=""></img>`
-      //   document.getElementById("imagenes2").innerHTML = " " + `<img src="${dato1.images[2]}" alt=""></img>`
-      //   document.getElementById("imagenes3").innerHTML = " " + `<img src="${dato1.images[3]}" alt=""></img>`
+        document.getElementById("imagenes0").innerHTML = " " + `<img src="${dato1.images[0]}" alt=""></img>`
+        document.getElementById("imagenes1").innerHTML = " " + `<img src="${dato1.images[1]}" alt=""></img>`
+        document.getElementById("imagenes2").innerHTML = " " + `<img src="${dato1.images[2]}" alt=""></img>`
+        document.getElementById("imagenes3").innerHTML = " " + `<img src="${dato1.images[3]}" alt=""></img>`
 
       // Recorremos el array e imprimimos las imagenes en pantalla.
-       let htmlImagenes = "";
-      for(let j=0; j < arrayImg.length; j++){
-         htmlImagenes += `
-         <div class="col">
-         <img src="${arrayImg[j]}" alt="" class"img">
-         </div>
-         `
-      }
-      document.getElementById("imagenes-info").innerHTML += htmlImagenes;
-      console.log(arrayImg);
-}
+   //    document.getElementById("imagenes-info").innerHTML = "";
+   //  for (const imgProducto of arrayImg) { 
+   //    let htmlImagenes = `
+   //    <img src="${imgProducto.images[1]}" alt="">
+   //    `;
+   //    document.getElementById("imagenes-info").innerHTML += htmlImagenes;
+   //  }
+
+//    let img = "";
+// for(let i = 0; i < dato1.images.length; i++){
+//    let imagenes = dato1.images[i];
+
+//        img += `
+//        <div>
+//        <img src="${imagenes.images}" alt="">
+//        </div>
+//        `
+//    }
+   
+//    document.getElementById("imagenes-info").innerHTML = img;
+   
+// }
+   }
+
+
+
+
    
 
         

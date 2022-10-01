@@ -22,3 +22,4 @@ boton.addEventListener("click", function(){
     let usuario_json = JSON.stringify(usuario);
     localStorage.setItem("email", usuario_json);
   }
+
