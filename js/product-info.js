@@ -1,18 +1,9 @@
-// var listaInfo = []
+let listaInfo = [];
 
-// document.addEventListener("DOMContentLoaded", () =>{
-//    petitions()
-// });
-
-
-// const petitions = async () => {
-//    listaInfo = await fetch(PRODUCT_INFO_URL + localStorage.getItem("InfoID") + EXT_TYPE)
-//    .then((e) => e.json())
-//    .then((e) => e);
-//    console.log(listaInfo);
-// }
-
-
+function productoRelated(id){
+   localStorage.setItem("InfoID", id);
+    window.location = "product-info.html"
+}
 
 document.addEventListener("DOMContentLoaded", () => {
    getJSONData(PRODUCT_INFO_URL + localStorage.getItem("InfoID") + EXT_TYPE)
@@ -28,15 +19,37 @@ document.addEventListener("DOMContentLoaded", () => {
       for(let i = 0; i < images.length; i++){
          let img = images[i]
          html += `
-         <div class="card">
-      <img class="" src="${img}" alt="">
+         <div class=" product-img">
+      <img class="img" src="${img}" alt="">
           </div>
          `
       }
       return html;
+}
+
+var container2 = document.getElementById("pRelated")
+
+
+const renderRelated =(relatedProducts) =>{
+   let htmlRelacionado = ``
+   for(relacion of relatedProducts){
+      htmlRelacionado += `
+      <div onclick="productoRelated(${relacion.id})">
+      <div class="card cursor-active" style="width: 18rem;" ">
+  <img src="${relacion.image}" class="card-img-top" alt="...">
+  <div class="card-body">
+    <p class="card-text">${relacion.name}</p>
+  </div>
+</div>
+</div>
+      `
    }
 
-   const render = (data) => {
+   return htmlRelacionado;
+}
+
+
+      const render = (data) => {
       container.innerHTML += `
       <div class="card-body">
       <h2 class="card-title">${data.name}</h2><hr>
@@ -49,11 +62,16 @@ document.addEventListener("DOMContentLoaded", () => {
       <h4>Cantidad de vendidos</h4>
       <h6 class="card-muted">${data.soldCount}<h6>
       <h4>Imagenes ilustrativas</h4>
-      <div class="card product-img" style="width=30px">
+      <div class="img" style="width=30px">
       ${renderImg(data.images)}
+      </div>
+      <div>
+      ${renderRelated(data.relatedProducts)}
       </div>
       `
     }
    
 })
+
+
 

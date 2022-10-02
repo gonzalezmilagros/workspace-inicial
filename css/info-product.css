@@ -1,7 +1,14 @@
 .product-img{
-    width: 200px !important;
-height:200px;
-position:relative;
-display:inline;
-    
+    height: 170px;
+    width: 200px;
+    display: flex;
+    margin: 20px  50px  20px  50px;
+}
+
+.img{
+    display: flex;
+}
+
+.card{
+    display: flex;
 }
