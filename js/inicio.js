@@ -38,7 +38,7 @@ carrito.addEventListener("click", function(){
 
 let perfil = document.getElementById("profile");
 
-cierre.addEventListener("click", function(){
+perfil.addEventListener("click", function(){
           location.replace("my-profile.html")
       })
     
