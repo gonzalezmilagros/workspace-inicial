@@ -2,13 +2,22 @@
     height: 170px;
     width: 200px;
     display: flex;
-    margin: 20px  50px  20px  50px;
+    margin: 30px  50px  50px  50px;
+    float: left;
 }
 
 .img{
     display: flex;
 }
 
-.card{
-    display: flex;
+.text-muted{
+        position: relative;
+        margin: 30px  50px  50px  50px;
+        height: 40px;
+        padding:5px 20px;
+        clear: left;
+}
+
+.related{
+    margin: 30px  30px  50px  30px; 
 }

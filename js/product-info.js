@@ -1,22 +1,22 @@
 let listaInfo = [];
 
-function productoRelated(id){
+function productoRelated(id) {
    localStorage.setItem("InfoID", id);
-    window.location = "product-info.html"
+   window.location = "product-info.html"
 }
 
 document.addEventListener("DOMContentLoaded", () => {
    getJSONData(PRODUCT_INFO_URL + localStorage.getItem("InfoID") + EXT_TYPE)
-   .then(e => {
-      render(e.data)
-      // console.log(e);
-   })
+      .then(e => {
+         render(e.data)
+         // console.log(e);
+      })
 
    var container = document.getElementById("contenedor")
 
-   const renderImg = (images) =>{
+   const renderImg = (images) => {
       let html = ``
-      for(let i = 0; i < images.length; i++){
+      for (let i = 0; i < images.length; i++) {
          let img = images[i]
          html += `
          <div class=" product-img">
@@ -25,31 +25,30 @@ document.addEventListener("DOMContentLoaded", () => {
          `
       }
       return html;
-}
+   }
 
-var container2 = document.getElementById("pRelated")
+   var container2 = document.getElementById("pRelated")
 
 
-const renderRelated =(relatedProducts) =>{
-   let htmlRelacionado = ``
-   for(relacion of relatedProducts){
-      htmlRelacionado += `
-      <div onclick="productoRelated(${relacion.id})">
+   const renderRelated = (relatedProducts) => {
+      let htmlRelacionado = ``
+      for (relacion of relatedProducts) {
+         htmlRelacionado += `
+      <div onclick="productoRelated(${relacion.id})" class="product-img related">
       <div class="card cursor-active" style="width: 18rem;" ">
-  <img src="${relacion.image}" class="card-img-top" alt="...">
+  <img src="${relacion.image}" class="card-img-top img" alt="...">
   <div class="card-body">
     <p class="card-text">${relacion.name}</p>
   </div>
 </div>
 </div>
       `
+      }
+
+      return htmlRelacionado;
    }
 
-   return htmlRelacionado;
-}
-
-
-      const render = (data) => {
+   const render = (data) => {
       container.innerHTML += `
       <div class="card-body">
       <h2 class="card-title">${data.name}</h2><hr>
@@ -65,13 +64,11 @@ const renderRelated =(relatedProducts) =>{
       <div class="img" style="width=30px">
       ${renderImg(data.images)}
       </div>
+      <h4>Productos relacionados</h4>
       <div>
       ${renderRelated(data.relatedProducts)}
       </div>
       `
-    }
-   
+   }
+
 })
-
-
-
