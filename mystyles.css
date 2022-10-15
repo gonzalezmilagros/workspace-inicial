@@ -193,7 +193,7 @@ body,html{
 }
 
 /* COMENTARIOS DE PRODUCTOS */
-/* 
+
 #card-comment{
   border-radius: 5px;
   border: 1px solid #cacaca;
@@ -205,7 +205,7 @@ body,html{
   margin: 0px  10px  0px  0px;
   clear: left;
 
-} */
+}
 
 #redirectCart{
   position: absolute; top: 4rem; right: 5rem;

@@ -1,7 +1,3 @@
-const productCart = () => {
-   window.location = "cart.html"
- }
-
 // -----------------------------------------------------------------------------------------------------------------------------//
 //Función que guarda el id del producto en el localStorage y redirecciona a la página de info del producto
 // -----------------------------------------------------------------------------------------------------------------------------//
@@ -75,7 +71,7 @@ document.addEventListener("DOMContentLoaded", () => {
       container.innerHTML += `
       <div class="card-body">
       <h2 class="card-title">${data.name}</h2>
-      <button type="button" class="btn btn-outline-success" id="redirectCart"onclick="productCart"><img src="/img/icons8-carrito-de-compras-32.png" alt="..."></button><hr>
+      <button type="button" class="btn btn-outline-success" id="redirectCart"><a href="/cart.html"><img src="/img/icons8-carrito-de-compras-32.png" alt="..."></a></button><hr>
       <h4>Precio</h4>
       <h6 class="card-muted">${data.cost} ${data.currency}<h6>
       <h4>Descripción</h4>
