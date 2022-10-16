@@ -207,6 +207,41 @@ body,html{
 
 }
 
+/* BOTÓN PARA REDIRIGIR AL CART */
+
 #redirectCart{
   position: absolute; top: 4rem; right: 5rem;
+}
+
+
+/* IMAGEN DE CARRITO */
+
+.img-cart{
+  width: 90px;
+  height: 60px;
+}
+
+/* TITULO DE ARTÍCULOS */
+
+.container-sub{
+  padding-left: 5%;
+  font-weight: bold;
+}
+
+.product{
+  float: left;
+  word-spacing: 2px;
+}
+
+.boton-product{
+  width: 80%;
+}
+
+#style-carrito{
+  padding: 30px;
+  padding-bottom: 20%;
+}
+
+#infoP-subtotal{
+  font-weight: bold;
 }
