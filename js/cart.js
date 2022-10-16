@@ -6,27 +6,33 @@ document.addEventListener("DOMContentLoaded", () => {
       if (resultado.status == "ok") {
          listaCart = resultado.data.articles;
          cartProducts(listaCart);
-         // console.log(resultado);
-      } else {
+         const myFuncion = () => {
+          let btnCantidad = document.getElementById("myInput");
+        
+          btnCantidad.addEventListener('click', function() {
+            document.getElementById("elSubtotal").innerHTML = btnCantidad.value*15200;
+                    })
+        }
+         myFuncion();
+        } else {
          alert("algo salió mal: " + resultado.data.articles)
       }
    })
 
    var container = document.getElementById("carritoProduct")
 
-
+   
 
    // -----------------------------------------------------------------------------------------------------------------------------//
    // Función que muestra los productos en el carrito y el formulario de envío.
    // -----------------------------------------------------------------------------------------------------------------------------//  
-
-
+{/* <button class="btn btn-light boton-product" type="button" data-bs-toggle="collapse" data-bs-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">  */}
    const cartProducts = (data) => {
       container.innerHTML += ''
       for (pCart in data) {
          container.innerHTML += `
          <p>
-  <button class="btn btn-outline-light boton-product" type="button" data-bs-toggle="collapse" data-bs-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
+         
   <div class="container list-group-item product">
   <div class="row">
     <div class="col-1 infoP">
@@ -39,16 +45,15 @@ document.addEventListener("DOMContentLoaded", () => {
     ${data[pCart].currency}${data[pCart].unitCost}
     </div>
     <div class="col-2 infoP">
-    <input type="number" style="width:4rem; height:3rem;">
-    </div>
-    <div class="col-3 infoP">
-    ${data[pCart].currency}${data[pCart].unitCost}
-    </div>
+    <input type="number" id="myInput" oninput="myFuncion" min="1">
+      </div>
+      <p class="col-3 infoP" id="elSubtotal">
+      ${data[pCart].currency}
+        </p>
   </div>
 </div>
   </button>
 </p>
-<div class="collapse" id="collapseExample">
   <div class="card card-body">
   <h5>Tipos de envío</h5>
   <div class="form-check form-switch">
@@ -79,8 +84,13 @@ document.addEventListener("DOMContentLoaded", () => {
 </div>
 `
    }
-}
+}  
+
 });
+
+
+
+
 
 
 
