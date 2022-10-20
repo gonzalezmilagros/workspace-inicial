@@ -11,6 +11,7 @@ document.addEventListener("DOMContentLoaded", () => {
         
           btnCantidad.addEventListener('click', function() {
             document.getElementById("elSubtotal").innerHTML = btnCantidad.value*15200;
+            console.log();
                     })
         }
          myFuncion();
