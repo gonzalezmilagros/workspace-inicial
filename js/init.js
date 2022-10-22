@@ -8,6 +8,11 @@ const CART_BUY_URL = "https://japceibal.github.io/emercado-api/cart/buy.json";
 const EXT_TYPE = ".json";
 
 
+// -----------------------------------------------------------------------------------------------------------------------------//
+// Mostrar spinners si la petición al fetch falla.
+// -----------------------------------------------------------------------------------------------------------------------------// 
+
+
 let showSpinner = function(){
   document.getElementById("spinner-wrapper").style.display = "block";
 }
@@ -15,6 +20,11 @@ let showSpinner = function(){
 let hideSpinner = function(){
   document.getElementById("spinner-wrapper").style.display = "none";
 }
+
+
+// -----------------------------------------------------------------------------------------------------------------------------//
+// Petición al fetch.
+// -----------------------------------------------------------------------------------------------------------------------------// 
 
 let getJSONData = function(url){
     let result = {};

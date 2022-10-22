@@ -1,3 +1,7 @@
+// -----------------------------------------------------------------------------------------------------------------------------//
+// Evento click el las imágenes del inicio que redirigen a sus dichas categorías
+// -----------------------------------------------------------------------------------------------------------------------------// 
+
 document.addEventListener("DOMContentLoaded", function(){
     document.getElementById("autos").addEventListener("click", function() {
         localStorage.setItem("catID", 101);
@@ -13,7 +17,11 @@ document.addEventListener("DOMContentLoaded", function(){
     });
 });
 
-function mostrarDatos(){
+// -----------------------------------------------------------------------------------------------------------------------------//
+//Función que trae el dato del nombre de usuario guardado en localStorage y lo muestra en navbar.
+// -----------------------------------------------------------------------------------------------------------------------------// 
+
+const mostrarDatos = () => {
     if(localStorage.getItem("email")){
         usuario_json = localStorage.getItem("email");
         email = JSON.parse(usuario_json);
@@ -24,9 +32,26 @@ function mostrarDatos(){
 
 mostrarDatos();
 
+
+// -----------------------------------------------------------------------------------------------------------------------------//
+// Función que elimina el usuario del localStorage.
+// -----------------------------------------------------------------------------------------------------------------------------// 
+
+const eliminarUsuario = () => {
+    mostrarDatos();
+    localStorage.clear();
+}
+
+
+// -----------------------------------------------------------------------------------------------------------------------------//
+// El nombre de usuario es un dropdown. Aquí con el evento click redireccionamos a diferentes páginas segun el botón enlace.
+// -----------------------------------------------------------------------------------------------------------------------------// 
+
+
 let cierre = document.getElementById("Sign-off");
 
 cierre.addEventListener("click", function(){
+      eliminarUsuario();
       location.replace("index.html")
   })
 

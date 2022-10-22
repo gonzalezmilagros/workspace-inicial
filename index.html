@@ -9,45 +9,49 @@
   <link href="https://fonts.googleapis.com/css?family=Raleway:300,300i,400,400i,700,700i,900,900i" rel="stylesheet">
   <link href="css/bootstrap.min.css" rel="stylesheet">
   <link href="css/styles.css" rel="stylesheet">
-  <link rel="stylesheet" href="mystyles.css">
-  <!-- <style>
-    body {
-      background-color: rgb(248, 249, 250);
-    }
-  </style> -->
+  <link rel="stylesheet" href="loginStyle.css">
 </head>
 
 <body>
 
-  <div class="login-img">
-    <img src="img/login.png" alt="">
-  </div>
+<section class="vh-100 gradient-custom">
+<div class="container py-5 h-100">
+      <div class="row d-flex justify-content-center align-items-center h-100">
+        <div class="col-12 col-md-8 col-lg-6 col-xl-5 ">
+          <div class="card bg text-white" style="border-radius: 1rem;">
+            <div class="card-body p-5 text-center">
+  
+              <div class="mb-md-5 mt-md-4 pb-5">
+  
+                <div class="img-login">
+                  <img src="img/login-removebg-preview.png" alt="" style="width: 300px; height: 120px;">
+                </div>
 
-  <div class="container1">
-    <h1>Inicio de sesión</h1>
-  </div>
-  <div class="login">
-    <div class="form-group">
-      <label>Email</label><br>
-      <input id="email" class="form-control" type="email" name="email" placeholder="email">
+                <div class="form-outline form-white mb-3">
+                  <label class="form-label" for="typeEmailX"></label>
+                  <input type="email" id="email" class="form-control form-control-lg" placeholder="Email" required>
+                </div>
+  
+                <div class="form-outline form-white mb-3">
+                  <label class="form-label" for="typePasswordX"></label>
+                  <input type="password" id="password" class="form-control form-control-lg" placeholder="Contraseña" required>
+                </div><br>
+  
+                <button class="btn btn-outline-primary btn-lg px-5" type="button" id="boton">Entrar</button>
+
+                <div id="alerta" class="alert alert-danger alert-dismissible fade show" role="alert" style="display:none;">
+                   ¡Upss... los datos ingresados no son correctos!
+                  <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close" id="cerrarAlerta"></button>
+                </div>
+  
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
-    <div class="form-group">
-      <label id="mini-titulo">Contraseña</label><br>
-      <input id="password" class="form-control" type="password" name="contraseña" placeholder="contraseña"><br>
-    </div>
-    <button class="btn btn-primary btn-block" type="button" id="boton" onclick="myFunction">Iniciar sesión</button>
-  </div>
-  <footer class="text-muted">
-    <div class="container">
-      <p class="float-end">
-        <a href="#">Volver arriba</a>
-      </p>
-      <p>Este sitio forma parte de <a href="https://jovenesaprogramar.edu.uy/" target="_blank">Jovenes a Programar</a> -
-        2022</p>
-      <p>Clickea <a target="_blank" href="Letra.pdf">aquí</a> para descargar la letra del obligatorio.</p>
-    </div>
-  </footer>
-  <script src="js/index.js"></script>
+  </section>
+<script src="js/index.js"></script>
 </body>
 
 </html>

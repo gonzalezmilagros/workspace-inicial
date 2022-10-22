@@ -2,14 +2,24 @@ let listaProductos = []
 let min = undefined //no está definida, o sea no está inicializada//
 let max = undefined
 
+// -----------------------------------------------------------------------------------------------------------------------------//
+//Función que guarda el id del producto en el localStorage
+// -----------------------------------------------------------------------------------------------------------------------------// 
+
 function infoProducts(id){
     localStorage.setItem("InfoID", id);
     window.location = "product-info.html"
 }
 
+
+// ------------------------------------------------------------------------------------------------------------------------------//
+// Con el for of recorremos el array y con innerHTML imprimimos en pantalla los elementos. 
+// También aquí se realizan las condiciones para poder llevar a cabo los filtros.
+// -----------------------------------------------------------------------------------------------------------------------------// 
+
 function mostrarProductos(arrayProductos) {
     document.getElementById("productos").innerHTML = "";
-    for (const producto of arrayProductos) {
+    for (const producto of arrayProductos) {        
         producto.cost = parseInt(producto.cost);
         if ((min == undefined && max == undefined) || (producto.cost >= min && producto.cost <= max) ||
         (producto.cost >= min && max == undefined) || (producto.cost <= max && min == undefined)) {
@@ -41,6 +51,10 @@ function mostrarProductos(arrayProductos) {
        
 }
 
+// -----------------------------------------------------------------------------------------------------------------------------//
+// Función que se ejecuta al cargar la página. La cual nos trae los elementos que pedimos con getJSONData.
+// -----------------------------------------------------------------------------------------------------------------------------// 
+
 
 document.addEventListener("DOMContentLoaded", function () {
     getJSONData(PRODUCTS_URL + localStorage.getItem("catID") + EXT_TYPE).then(resultado => {
@@ -53,6 +67,10 @@ document.addEventListener("DOMContentLoaded", function () {
         }
     });
 
+
+// -----------------------------------------------------------------------------------------------------------------------------//
+//Filtros de la página.
+// -----------------------------------------------------------------------------------------------------------------------------// 
 
     document.getElementById("filtrar").addEventListener("click", function(){
         min = document.getElementById("rango-min").value != "" ? parseInt(document.getElementById("rango-min").value) : undefined;
