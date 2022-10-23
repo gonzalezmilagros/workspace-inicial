@@ -30,15 +30,15 @@
           <li class="nav-item">
             <a class="nav-link" href="sell.html">Vender</a>
           </li>
-          <div class="dropdown">
-            <button class="btn btn-secondary dropdown-toggle usuario " type="button" id="datos-usuario" data-bs-toggle="dropdown" aria-expanded="false"></button>
-            <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
-              <li><a id="cart" class="dropdown-item" href="#">Mi carrito</a></li>
-              <li><a id="profile" class="dropdown-item" href="#">Mi perfil</a></li>
-              <li><a id="Sign-off" class="dropdown-item" href="#">Cerrar sesión</a></li>
-            </ul>
-          </div>
           <li class="nav-item">
+            <div class="dropdown">
+              <button class="btn btn-dark dropdown-toggle navbar-usuario" type="button" id="datos-usuario" data-bs-toggle="dropdown" aria-expanded="false"></button>
+              <ul class="dropdown-menu bg-dark" aria-labelledby="dropdownMenuButton1">
+                <li><a id="cart" class="dropdown-item text-light" href="#">Mi carrito</a></li>
+                <li><a id="profile" class="dropdown-item text-light" href="#">Mi perfil</a></li>
+                <li><a id="Sign-off" class="dropdown-item text-light" href="#">Cerrar sesión</a></li>
+              </ul>
+            </div>
           </li>
         </ul>
       </div>
@@ -46,28 +46,11 @@
   </nav>
   <main>
  <div id="style-carrito">
-  <h3>Carrito de compras</h3> <hr>
-    <h5>Artículos a comprar</h5>
-    <div class="container container-sub">
-      <div class="row">
-        <div class="col-2">
-          Nombre
-        </div>
-        <div class="col-2">
-          Costo
-        </div>
-        <div class="col-2">
-          Cantidad
-        </div>
-        <div class="col-2">
-          Subtotal
-        </div>
-      </div>
-    </div>
+    <h3>Carrito de compras</h3> <hr>
+    <h5>Artículos a comprar</h5><br>
     <div id="carritoProduct" class="list-group"></div>
  </div>
-
-  </main>
+</main>
   <footer class="text-muted">
     <div class="container">
       <p class="float-end">
@@ -90,6 +73,7 @@
   <script src="js/init.js"></script>
   <script src="js/cart.js"></script>
   <script src="js/inicio.js"></script>
+  <!-- <script src="js/cart2.js"></script> -->
 </body>
 
 </html>

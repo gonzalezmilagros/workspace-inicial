@@ -73,16 +73,9 @@
   
 /* NOMBRE DE USUARIO */
 
-.usuario{
-  color: #BEBFC4 ;
-  font-size: 17px;
-  font-family: 'Raleway', serif !important;
-  background-color: #212529;
-  padding: 0; 
-  border: none;  
-  background: none;
-  position: relative; right: 1rem;
-  padding-top: 7px;
+.navbar-usuario{
+  position: relative;
+  padding-left: 2px ;
 }
 
 /* FILTROS */
