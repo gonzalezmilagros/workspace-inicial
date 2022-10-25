@@ -6,9 +6,16 @@ document.addEventListener("DOMContentLoaded", () => {
       if (resultado.status == "ok") {
          listaCart = resultado.data.articles;
          cartProducts(listaCart);
-         inputSubtotal.oninput = function() {
+
+  //  -----------------------------------------------------------------------------------------------------------------------------//
+  //  Eventos oninputs.
+  //  -----------------------------------------------------------------------------------------------------------------------------// 
+
+          inputSubtotal.oninput = function() {
           mySubtotal.innerHTML = inputSubtotal.value * 15200;
         };
+
+
         } else {
          alert("algo salió mal: " + resultado.data.articles)
       }
@@ -19,9 +26,9 @@ document.addEventListener("DOMContentLoaded", () => {
 
    
 
-   // -----------------------------------------------------------------------------------------------------------------------------//
-   // Función que muestra los productos en el carrito y el formulario de envío.
-   // -----------------------------------------------------------------------------------------------------------------------------//  
+  //  -----------------------------------------------------------------------------------------------------------------------------//
+  //  Función que muestra los productos en el carrito y el formulario de envío.
+  //  -----------------------------------------------------------------------------------------------------------------------------//  
    
    
    
@@ -48,8 +55,8 @@ document.addEventListener("DOMContentLoaded", () => {
             </p>
           </div>
 
-        <div>
-          <button class="btn btn-primary position-absolute top-50 start-50 translate-middle" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight">Comprar</button>
+        <div class="position-relative"><hr><br>
+        <button class="btn btn-outline-primary position-relative top-50 start-50 translate-middle" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight">Comprar</button>
         </div>
 
         <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasRight" aria-labelledby="offcanvasRightLabel">
@@ -96,15 +103,23 @@ document.addEventListener("DOMContentLoaded", () => {
     
           </div>
     
-          <div class="col-sm-5">
+          <div class="col-sm-15">
 
             <hr><h5>Costo</h5>
     
               <div class="card card-body">
+              <h6>Subtotal</h6>
+              <p>Costo unitario del producto por cantidad.</p>
               </div>
+
               <div class="card card-body">
+              <h6>Costo de envío</h6>
+              <p>Según el tipo de envío.</p>
               </div>
+
               <div class="card card-body">
+              <h6>Total ($)</h6>
+              <p>Costo unitario del producto por cantidad</p>
               </div>
 
           </div>
