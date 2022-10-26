@@ -14,6 +14,10 @@ document.addEventListener("DOMContentLoaded", () => {
           inputSubtotal.oninput = function() {
           mySubtotal.innerHTML = inputSubtotal.value * 15200;
         };
+          
+        
+
+
 
 
         } else {
@@ -71,17 +75,17 @@ document.addEventListener("DOMContentLoaded", () => {
           <hr><h5>Tipos de envío</h5>
 
             <div class="form-check form-switch">
-              <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckDefault">
+              <input class="form-check-input" name="envioEjemplo" type="radio" role="switch" id="quinceXciento">
               <label class="form-check-label" for="flexSwitchCheckDefault">Premium 2 a 5 días(15%)</label>
             </div>
 
             <div class="form-check form-switch">
-              <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckDefault">
+              <input class="form-check-input" name="envioEjemplo" type="radio" role="switch" id="sieteXciento">
               <label class="form-check-label" for="flexSwitchCheckDefault">Express 5 a 8 días(7%)</label>
             </div>
 
             <div class="form-check form-switch">
-              <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckDefault">
+              <input class="form-check-input" name="envioEjemplo" type="radio" role="switch" id="cincoXciento">
               <label class="form-check-label" for="flexSwitchCheckDefault">Standard 12 a 15 días(5%)</label>
             </div>
     
@@ -110,6 +114,7 @@ document.addEventListener("DOMContentLoaded", () => {
               <div class="card card-body">
               <h6>Subtotal</h6>
               <p>Costo unitario del producto por cantidad.</p>
+              <ul id="subtotal2input"></ul>
               </div>
 
               <div class="card card-body">
