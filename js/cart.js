@@ -11,16 +11,31 @@ document.addEventListener("DOMContentLoaded", () => {
   //  Eventos oninputs.
   //  -----------------------------------------------------------------------------------------------------------------------------// 
 
-          inputSubtotal.oninput = function() {
-          mySubtotal.innerHTML = inputSubtotal.value * 15200;
-        };
+      inputSubtotal.oninput = function() {
+        mySubtotal.innerHTML = inputSubtotal.value * 15200;
+        subtotal2input.innerHTML = inputSubtotal.value * 15200;
+      };
           
-        
+      quinceXciento.oninput = function() {
+        shippingType.innerHTML = inputSubtotal.value * 15200 * 15 / 100;
+      };
+
+      sieteXciento.oninput = function() {
+        shippingType.innerHTML = inputSubtotal.value * 15200 * 7 / 100;
+      };
+
+      cincoXciento.oninput = function() {
+        shippingType.innerHTML = inputSubtotal.value * 15200 * 5 / 100;
+      };
+
+      
 
 
 
 
-        } else {
+
+
+      } else {
          alert("algo salió mal: " + resultado.data.articles)
       }
    })
@@ -112,19 +127,16 @@ document.addEventListener("DOMContentLoaded", () => {
             <hr><h5>Costo</h5>
     
               <div class="card card-body">
-              <h6>Subtotal</h6>
-              <p>Costo unitario del producto por cantidad.</p>
-              <ul id="subtotal2input"></ul>
+              <h6>Subtotal: &nbsp;${data[pCart].currency}<spam id="subtotal2input"></spam></h6>
+              
               </div>
 
               <div class="card card-body">
-              <h6>Costo de envío</h6>
-              <p>Según el tipo de envío.</p>
+              <h6>Costo de envío:${data[pCart].currency} <spam id="shippingType"></spam></h6>
               </div>
 
               <div class="card card-body">
-              <h6>Total ($)</h6>
-              <p>Costo unitario del producto por cantidad</p>
+              <h6>Total ($) ${data[pCart].currency} <spam id="totalToPay"></spam></h6></h6>
               </div>
 
           </div>
