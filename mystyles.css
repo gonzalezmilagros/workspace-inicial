@@ -186,3 +186,10 @@
 #infoP-subtotal{
   font-weight: bold;
 }
+
+
+/* CANTIDAD DE PRODUCTOS EN EL CARRITO */
+
+.cant-input{
+  display: inline-block;
+}
