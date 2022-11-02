@@ -1,7 +1,7 @@
 const USER_CART = "https://japceibal.github.io/emercado-api/user_cart/25801.json";
 let listaCart = [];
 let form = document.getElementById("formularioValidacion")
-let shareForm = false
+let sendForm = false
 
 document.addEventListener("DOMContentLoaded", () => {
    getJSONData(USER_CART).then(resultado => {
