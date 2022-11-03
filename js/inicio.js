@@ -26,8 +26,9 @@ const mostrarDatos = () => {
         usuario_json = localStorage.getItem("email");
         email = JSON.parse(usuario_json);
 
-        document.getElementById("datos-usuario").innerHTML = email; 
+        document.getElementById("datos-usuario").innerHTML = email;
     }
+
 }
 
 mostrarDatos();
