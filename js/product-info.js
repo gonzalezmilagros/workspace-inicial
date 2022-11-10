@@ -80,11 +80,11 @@ document.addEventListener("DOMContentLoaded", () => {
       <h6 class="card-muted">${data.category}<h6>
       <h4>Cantidad de vendidos</h4>
       <h6 class="card-muted">${data.soldCount}<h6>
-      <h4>Imagenes ilustrativas</h4>
+      <h4 id="pImages">Imagenes ilustrativas</h4>
       <div class="img">
       ${renderImg(data.images)}
       </div>
-      <h4>Productos relacionados</h4>
+      <h4 id="pRelacionados">Productos relacionados</h4>
       <div>
       ${renderRelated(data.relatedProducts)}
       </div>
@@ -113,17 +113,19 @@ fetch(PRODUCT_INFO_COMMENTS_URL + localStorage.getItem("InfoID") + EXT_TYPE)
 
 
 const showComments = () => {
-   let htmlComment = ``
+   let htmlComment = `
+   <h4 id="pcoment">Comentarios</h4>
+   `
    for (let i = 0; i < dato.length; i++) {
       let comment = dato[i]
       htmlComment += `
-      
-      <div id="comments">
-       <div id="card-comment">
-       ${comment.user}  ${comment.dateTime}  ${comment.score} <br>
-       ${comment.description} <br><br>
-       </div>
-       </div>
+      <div id="comments" class="row g-3 comentariosT">
+         <div id="card-comment">
+            ${comment.user}  ${comment.dateTime}  ${comment.score} <br>
+            ${comment.description} <br><br>
+         </div>
+      </div>
+   
        `
    }
    document.getElementById("content-comment").innerHTML = htmlComment;

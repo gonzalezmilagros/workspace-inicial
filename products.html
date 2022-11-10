@@ -53,20 +53,27 @@
     </div>
 
 <div id="filtros">
+  
+  <div class="row g-3 buscadorP">
+    <div class="col-md-4">
+      <input type="search" id="buscador" class="form-control" class="buscadorP" placeholder="buscar" >
+    </div>
+    </div>
+
   <div id="ordenar">
     <input type="radio" id="sortPrecioDesc" class="button-orden"><label for="" class="estilo-img"><img src="img/descendente-flecha.png" alt="">$</label>
     <input type="radio" id="sortPrecioAsc" class="button-orden"><label for="" class="estilo-img"><img src="img/ascendente-flecha.png" alt="">$</label>
     <input type="radio" id="sortRelevDesc" class="button-orden"><label for="" class="estilo-img"><img src="img/descendente-flecha.png" alt="">Rel.</label>
- </div>
-   <div id="precio">
-    <p class="price">Precio</p>
-      <input type="number" id="rango-min" placeholder="min" class="min-max">
-      <input type="number" id="rango-max" placeholder="max" class="min-max">
+  </div>
+    <div id="precio">
+      <p class="price">Precio</p>
+        <input type="number" id="rango-min" placeholder="min" class="min-max">
+        <input type="number" id="rango-max" placeholder="max" class="min-max">
 
-      <button id="filtrar" class="btn-controles">Filtrar</button>
-  <button id="limpiar" class="btn-controles">Limpiar</button>
-   </div>
-</div>
+        <button id="filtrar" class="btn-controles">Filtrar</button>
+        <button id="limpiar" class="btn-controles">Limpiar</button>
+    </div>
+  </div>
     <div id="listado">
       <p>
         <ul id="productos"></ul>

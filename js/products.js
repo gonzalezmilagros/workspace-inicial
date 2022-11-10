@@ -1,6 +1,7 @@
 let listaProductos = []
 let min = undefined //no está definida, o sea no está inicializada//
 let max = undefined
+let search = undefined;
 
 // -----------------------------------------------------------------------------------------------------------------------------//
 //Función que guarda el id del producto en el localStorage
@@ -23,7 +24,10 @@ function mostrarProductos(arrayProductos) {
         producto.cost = parseInt(producto.cost);
         if ((min == undefined && max == undefined) || (producto.cost >= min && producto.cost <= max) ||
         (producto.cost >= min && max == undefined) || (producto.cost <= max && min == undefined)) {
-            let contenido = `
+            
+        if (search == undefined || search == "" || producto.name.toLowerCase().indexOf(search.toLowerCase()) > -1) {
+            
+                let contenido = `
         <ul onclick="infoProducts(${producto.id})"> 
             <div class="container-lista-productos cursor-active">
                 <div class="card-lista-productos">
@@ -47,6 +51,7 @@ function mostrarProductos(arrayProductos) {
         `;
         document.getElementById("productos").innerHTML += contenido;
     }
+        }
  }
        
 }
@@ -105,6 +110,11 @@ document.addEventListener("DOMContentLoaded", function () {
         listaProductos.sort(function (a, b) {
             return parseInt(b.soldCount) - parseInt(a.soldCount);
         })
+        mostrarProductos(listaProductos);
+    })
+
+    document.getElementById("buscador").addEventListener("input", function () {
+        search = document.getElementById("buscador").value;
         mostrarProductos(listaProductos);
     })
 })

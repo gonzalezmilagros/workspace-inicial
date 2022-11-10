@@ -195,10 +195,43 @@
 }
 
 
-/* ji
+/*  BUSCADOR DE PRODUCTOS */
 
-#emailPerfil{
-position: relative;
-padding-left: 2px ;
+#buscador{
+  position: relative; left: 5rem; top: 2px;
+}
 
-} */
+/* COMENTARIOS */
+
+#content-comment{
+  padding-top: 5rem;
+  padding-left: 3rem;
+  padding-bottom: 5rem;
+  width: 50rem;
+}
+
+
+/* PRODUCTOS RELACIONADOS */
+
+#pRelacionados{
+  padding-top: 4rem;
+}
+
+/* INFO PRODUCTOS */
+
+.card-body{
+  padding-left: 2rem;
+}
+
+#pcoment{
+  padding-top: 1rem;
+}
+
+.commentP{
+  padding-left: 3rem;
+  padding-bottom: 5rem;
+}
+
+.enviarC{
+  padding-top: 1rem;
+}
