@@ -1,3 +1,39 @@
+
+// -----------------------------------------------------------------------------------------------------------------------------//
+// se le atribuye a los numeros la cantidad de estrella que se deben mostrar en pantalla.
+// -----------------------------------------------------------------------------------------------------------------------------//
+
+star = {
+  datos : false,
+1:`<span class="fa fa-star checked"></span>
+   <span class="fa fa-star"></span>
+   <span class="fa fa-star"></span>
+   <span class="fa fa-star"></span>
+   <span class="fa fa-star"></span>`,
+2:`<span class="fa fa-star checked"></span>
+   <span class="fa fa-star checked"></span>
+   <span class="fa fa-star"></span>
+   <span class="fa fa-star"></span>
+   <span class="fa fa-star"></span>`,
+3:`<span class="fa fa-star checked"></span>
+   <span class="fa fa-star checked"></span>
+   <span class="fa fa-star checked"></span>
+   <span class="fa fa-star"></span>
+   <span class="fa fa-star"></span>`,
+4:`<span class="fa fa-star checked"></span>
+   <span class="fa fa-star checked"></span>
+   <span class="fa fa-star checked"></span>
+   <span class="fa fa-star checked"></span>
+   <span class="fa fa-star"></span>`,
+5:`<span class="fa fa-star checked"></span>
+   <span class="fa fa-star checked"></span>
+   <span class="fa fa-star checked"></span>
+   <span class="fa fa-star checked"></span>
+   <span class="fa fa-star checked"></span>`,
+}
+
+
+
 // -----------------------------------------------------------------------------------------------------------------------------//
 //Función que guarda el id del producto en el localStorage y redirecciona a la página de info del producto
 // -----------------------------------------------------------------------------------------------------------------------------//
@@ -121,7 +157,7 @@ const showComments = () => {
       htmlComment += `
       <div id="comments" class="row g-3 comentariosT">
          <div id="card-comment">
-            ${comment.user}  ${comment.dateTime}  ${comment.score} <br>
+            ${comment.user}  ${comment.dateTime} ${star[comment.score]} <br>
             ${comment.description} <br><br>
          </div>
       </div>
@@ -130,3 +166,4 @@ const showComments = () => {
    }
    document.getElementById("content-comment").innerHTML = htmlComment;
 }
+
