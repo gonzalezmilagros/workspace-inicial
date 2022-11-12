@@ -6,17 +6,26 @@ let nombre2 = document.getElementById('nombre2Profile');
 let apellido = document.getElementById('apellidoProfile');
 let apellido2 = document.getElementById('apellido2Profile');
 let cel = document.getElementById('celProfile');
-let emailP = document.getElementById('datos-usuario')
+let emailP = document.getElementById('datos-usuario');
 
+
+// -----------------------------------------------------------------------------------------------------------------------------//
+// escuha del botón y realiza la validación para que los campos de nombre, apellido y email estén completo
+// -----------------------------------------------------------------------------------------------------------------------------//
 
 
 btnProfile.addEventListener('click', () => {
-   if (nombre.value.length > 0 && apellido.value.length > 0 ) {
+   if (nombre.value.length > 0 && apellido.value.length > 0) {
     guardarDatosProfile()
+    exito()
    }else{
-    alert('hola')
+    errorAlert()
    }
 })
+
+// -----------------------------------------------------------------------------------------------------------------------------//
+// función para guardar los datos de los input en el localStorage.
+// -----------------------------------------------------------------------------------------------------------------------------//
 
 
 const guardarDatosProfile = () => {
@@ -24,24 +33,32 @@ const guardarDatosProfile = () => {
     nombreV.push(nombreL);
     let nombreV_json = JSON.stringify(nombreV);
     localStorage.setItem("nombre", nombreV_json);
-    mostrarDatosProfile();
   }
 
 
-  const mostrarDatosProfile = () => {
-   if(localStorage.getItem("nombre")){
-      nombreV_json = localStorage.getItem("nombre");
-       nombreV = JSON.parse(nombreV_json);
 
-       document.getElementById("jola").innerHTML = nombreV;
+
+document.addEventListener('DOMContentLoaded', () => {
+    
+})
+
+
+function errorAlert(){
+   let error = document.getElementById("alerts-profile")
+     
+     error.innerHTML = `
+     <div class="alert alert-danger alert-dismissible fade show" id="alert-error" role="alert">
+           Algo salió mal...
+     <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+     </div>`
    }
 
-}
-
-mostrarDatosProfile();
-
-
-document.addEventListener("DOMContentLoaded", function(){
-   localStorage.getItem("nombre");
-   mostrarDatosProfile();
-});
+   function exito() {
+       let error = document.getElementById("alerts-profile")
+     
+     error.innerHTML = `
+     <div class="alert alert-success alert-dismissible fade show" id="alert-success" role="alert">
+           Exito!!!
+     <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+     </div>`
+   }
