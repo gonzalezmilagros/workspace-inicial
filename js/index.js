@@ -41,7 +41,6 @@ closeL.addEventListener("click", function(){
   const guardarDatos = () => {
     let valor = document.getElementById("email").value;
     usuario.push(valor);
-    let usuario_json = JSON.stringify(usuario);
-    localStorage.setItem("email", usuario_json);
+    localStorage.setItem("email", usuario);
   }
 

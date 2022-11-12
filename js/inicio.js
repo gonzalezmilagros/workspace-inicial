@@ -23,10 +23,7 @@ document.addEventListener("DOMContentLoaded", function(){
 
 const mostrarDatos = () => {
     if(localStorage.getItem("email")){
-
-        usuario_json = localStorage.getItem("email");
-        email = JSON.parse(usuario_json);
-
+        email = localStorage.getItem("email");
         document.getElementById("datos-usuario").innerHTML = email;
     }
 }

@@ -1,25 +1,15 @@
+let infoProfile = [];
+
 let btnProfile = document.getElementById('btn-profile');
-let nombreV = [];
 
-let nombre = document.getElementById('nombreProfile');
-let nombre2 = document.getElementById('nombre2Profile');
-let apellido = document.getElementById('apellidoProfile');
-let apellido2 = document.getElementById('apellido2Profile');
-let cel = document.getElementById('celProfile');
-let emailP = document.getElementById('inputProfile')
+let nombre = document.getElementById('nombreProfile').value = localStorage.getItem("nombre");
+let nombre2 = document.getElementById('nombre2Profile').value = localStorage.getItem("nombreDos");
+let apellido = document.getElementById('apellidoProfile').value = localStorage.getItem("apellido");
+let apellido2 = document.getElementById('apellido2Profile').value = localStorage.getItem("apellidoDos");
+let phone = document.getElementById('phoneProfile').value = localStorage.getItem("phone");;
+let emailP = document.getElementById('inputProfile').value = localStorage.getItem("email");
 
 
-const mostrarDatosProfile = () => {
-  if(localStorage.getItem("email")){
-
-      usuario_json = localStorage.getItem("email");
-      emailP = JSON.parse(usuario_json);
-
-      document.getElementById("inputProfile").innerHTML = emailP;
-  }
-}
-
-mostrarDatosProfile();
 
 
 
@@ -29,9 +19,17 @@ mostrarDatosProfile();
 
 
 btnProfile.addEventListener('click', () => {
-   if (nombre.value.length > 0 && apellido.value.length > 0)  {
-    guardarDatosProfile()
-    exito()
+
+  let btnNombre = document.getElementById('nombreProfile');
+  let btnApellido = document.getElementById('apellidoProfile');
+  let btnEmail = document.getElementById('inputProfile');
+
+   if (btnNombre.value.length > 0 && btnApellido.value.length > 0 && btnEmail.value.length > 0){
+    nombreLS();
+    nombre2LS();
+    apellidoLS();
+    apellido2LS();
+    phoneLS();
    }else{
     errorAlert()
    }
@@ -42,29 +40,45 @@ btnProfile.addEventListener('click', () => {
 // -----------------------------------------------------------------------------------------------------------------------------//
 
 
-const guardarDatosProfile = () => {
-    let nombreL = document.getElementById("nombreProfile").value;
-    nombreV.push(nombreL);
-    let nombreV_json = JSON.stringify(nombreV);
-    localStorage.setItem("nombre", nombreV_json);
+const nombreLS = () => {
+    let nombreL = document.getElementById('nombreProfile').value;
+    infoProfile.push(nombreL);
+    localStorage.setItem('nombre', nombreL);
   }
 
 
+const nombre2LS = () => {
+  let nombre2L = document.getElementById('nombre2Profile').value;
+  localStorage.setItem('nombreDos', nombre2L)
+}  
+
+const apellidoLS = () => {
+  let apellidoL = document.getElementById('apellidoProfile').value;
+  localStorage.setItem('apellido', apellidoL)
+}  
+
+const apellido2LS = () => {
+  let apellido2L = document.getElementById('apellido2Profile').value;
+  localStorage.setItem('apellidoDos', apellido2L)
+}  
+
+const phoneLS = () => {
+  let phoneL = document.getElementById('phoneProfile').value;
+  localStorage.setItem('phone', phoneL)
+}  
+
+
+
 // -----------------------------------------------------------------------------------------------------------------------------//
-// función para qeu cuando carga la página verifique si hay datos en el localStorage
+// función para que cuando carga la página verifique si hay datos en el localStorage
 // -----------------------------------------------------------------------------------------------------------------------------//
-
-
-
 
 
 document.addEventListener('DOMContentLoaded', () => {
   if( emailP = "email" in localStorage){
-     alert("gil")
   }else { 
     alert('no'); }
 })
-
 
 // -----------------------------------------------------------------------------------------------------------------------------//
 // alertas de verificación
@@ -76,17 +90,7 @@ function errorAlert(){
      
      error.innerHTML = `
      <div class="alert alert-danger alert-dismissible fade show" id="alert-error" role="alert">
-           Algo salió mal...
-     <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
-     </div>`
-   }
-
-   function exito() {
-       let error = document.getElementById("alerts-profile")
-     
-     error.innerHTML = `
-     <div class="alert alert-success alert-dismissible fade show" id="alert-success" role="alert">
-           Exito!!!
+           Debe de completar los campos obligatorios...
      <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
      </div>`
    }
