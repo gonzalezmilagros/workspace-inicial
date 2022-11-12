@@ -1,5 +1,5 @@
 let btnProfile = document.getElementById('btn-profile');
-let usuario2 = [];
+let nombreV = [];
 
 let nombre = document.getElementById('nombreProfile');
 let nombre2 = document.getElementById('nombre2Profile');
@@ -21,10 +21,27 @@ btnProfile.addEventListener('click', () => {
 
 const guardarDatosProfile = () => {
     let nombreL = document.getElementById("nombreProfile").value;
-    let apellidoL = document.getElementById("apellidoProfile").value;
-    let emailP = document.getElementById("datos-usuario").value;
-    usuario2.push(nombreL);
-    usuario2.push(apellidoL);
-    let usuario_json = JSON.stringify(usuario2);
-    localStorage.setItem("email", usuario_json);
+    nombreV.push(nombreL);
+    let nombreV_json = JSON.stringify(nombreV);
+    localStorage.setItem("nombre", nombreV_json);
+    mostrarDatosProfile();
   }
+
+
+  const mostrarDatosProfile = () => {
+   if(localStorage.getItem("nombre")){
+      nombreV_json = localStorage.getItem("nombre");
+       nombreV = JSON.parse(nombreV_json);
+
+       document.getElementById("jola").innerHTML = nombreV;
+   }
+
+}
+
+mostrarDatosProfile();
+
+
+document.addEventListener("DOMContentLoaded", function(){
+   localStorage.getItem("nombre");
+   mostrarDatosProfile();
+});
