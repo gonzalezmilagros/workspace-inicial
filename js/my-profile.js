@@ -6,7 +6,21 @@ let nombre2 = document.getElementById('nombre2Profile');
 let apellido = document.getElementById('apellidoProfile');
 let apellido2 = document.getElementById('apellido2Profile');
 let cel = document.getElementById('celProfile');
-let emailP = document.getElementById('datos-usuario');
+let emailP = document.getElementById('inputProfile')
+
+
+const mostrarDatosProfile = () => {
+  if(localStorage.getItem("email")){
+
+      usuario_json = localStorage.getItem("email");
+      emailP = JSON.parse(usuario_json);
+
+      document.getElementById("inputProfile").innerHTML = emailP;
+  }
+}
+
+mostrarDatosProfile();
+
 
 
 // -----------------------------------------------------------------------------------------------------------------------------//
@@ -15,7 +29,7 @@ let emailP = document.getElementById('datos-usuario');
 
 
 btnProfile.addEventListener('click', () => {
-   if (nombre.value.length > 0 && apellido.value.length > 0) {
+   if (nombre.value.length > 0 && apellido.value.length > 0)  {
     guardarDatosProfile()
     exito()
    }else{
@@ -36,11 +50,25 @@ const guardarDatosProfile = () => {
   }
 
 
+// -----------------------------------------------------------------------------------------------------------------------------//
+// función para qeu cuando carga la página verifique si hay datos en el localStorage
+// -----------------------------------------------------------------------------------------------------------------------------//
+
+
+
 
 
 document.addEventListener('DOMContentLoaded', () => {
-    
+  if( emailP = "email" in localStorage){
+     alert("gil")
+  }else { 
+    alert('no'); }
 })
+
+
+// -----------------------------------------------------------------------------------------------------------------------------//
+// alertas de verificación
+// -----------------------------------------------------------------------------------------------------------------------------//
 
 
 function errorAlert(){
