@@ -42,6 +42,7 @@ btnProfile.addEventListener('click', () => {
 
 const nombreLS = () => {
     let nombreL = document.getElementById('nombreProfile').value;
+    let emailL = document.getElementById('inputProfile').value;
     infoProfile.push(nombreL);
     localStorage.setItem('nombre', nombreL);
   }
@@ -66,7 +67,6 @@ const phoneLS = () => {
   let phoneL = document.getElementById('phoneProfile').value;
   localStorage.setItem('phone', phoneL)
 }  
-
 
 
 // -----------------------------------------------------------------------------------------------------------------------------//
