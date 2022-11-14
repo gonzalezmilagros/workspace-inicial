@@ -42,7 +42,6 @@ btnProfile.addEventListener('click', () => {
 
 const nombreLS = () => {
     let nombreL = document.getElementById('nombreProfile').value;
-    let emailL = document.getElementById('inputProfile').value;
     infoProfile.push(nombreL);
     localStorage.setItem('nombre', nombreL);
   }
@@ -70,15 +69,51 @@ const phoneLS = () => {
 
 
 // -----------------------------------------------------------------------------------------------------------------------------//
+// Imagen del profile
+// -----------------------------------------------------------------------------------------------------------------------------//
+
+
+
+let avatarP = document.getElementById('avatar');
+
+
+  avatarP.addEventListener('change', () => {
+
+    const fr = new FileReader();
+  
+    fr.readAsDataURL(avatarP.files[0]);
+  
+    fr.addEventListener('load', () => {
+  
+       const url = fr.result;
+
+       localStorage.setItem("img", url);
+
+  
+    });
+  })
+
+ 
+
+    const url = localStorage.getItem("img");
+
+    const img = new Image();
+    img.src = url;
+    document.getElementById('imgAvatar').appendChild(img);
+    console.log(img);
+  
+
+
+// -----------------------------------------------------------------------------------------------------------------------------//
 // función para que cuando carga la página verifique si hay datos en el localStorage
 // -----------------------------------------------------------------------------------------------------------------------------//
 
 
-document.addEventListener('DOMContentLoaded', () => {
-  if( emailP = "email" in localStorage){
-  }else { 
-    alert('no'); }
-})
+// document.addEventListener('DOMContentLoaded', () => {
+//   if( emailP = "email" in localStorage){
+//   }else { 
+//     alert('no'); }
+// })
 
 // -----------------------------------------------------------------------------------------------------------------------------//
 // alertas de verificación

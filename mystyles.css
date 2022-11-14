@@ -255,3 +255,25 @@ input[type="file"] {
   display: inline-block;
   cursor: pointer;
 }
+
+.imgClass{
+  width: 10px;
+}
+
+#perfil{
+  display:inline-block;margin-right:45rem; 
+  width:100px;
+
+} 
+
+#imgProfile {
+  display:inline-block; 
+  width: 75px;
+  padding-bottom: 10px;
+} 
+
+#btnGuardar{
+  padding-top: 20px;
+}
+
+

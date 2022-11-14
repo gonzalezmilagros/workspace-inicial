@@ -55,13 +55,24 @@
 
     <div id="alerts-profile"></div>
 
-    <div class="col-10">
+
+  <div class="col-10">
+    <div class="col-10" id="perfil">
       <h2>Perfil</h2>
+    </div>  
       
-      <input type="file" id="avatar">
 
+    <div id="imgProfile">
+      <label for="avatar" id="imgAvatar"><img src="img/perfil.jpg" alt="" id="imgProfile" ></label>
+      <input type="file"
+      id="avatar" 
+      name="avatar"
+      accept="image/png, image/jpeg"
+      >
+    </div>
+    <hr>
+  </div>
 
-    </div><hr>
 
   <div class="col-5">
     <label for="">Nombre*</label>    
@@ -93,7 +104,7 @@
     <input type="text" class="form-control" required id="phoneProfile">
   </div>
 
-  <div class="col-10">
+  <div class="col-10" id="btnGuardar">
     <hr><button type="button" class="btn btn-primary" id="btn-profile">Guardar</button>
   </div>
 
