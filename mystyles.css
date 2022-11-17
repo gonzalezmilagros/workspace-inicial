@@ -17,7 +17,7 @@
   }
 
   .container-lista-productos{
-    position: relative; top: 4rem;
+    position: relative; top: 6rem;
   }
   
   .card-lista-productos{
@@ -80,13 +80,28 @@
 
 /* FILTROS */
 
+/* 1-orden */
+
 #filtros{
   font-family:'Raleway', serif !important ;
 } 
 
-#precio{
-  position: absolute; top: 13rem; right: 9rem;
+#ordenar{
+  position: absolute; top: 14rem; right: 10rem; bottom: 2px;
+}
 
+.btn-light {
+  border-color: #FAF7F7;
+  background-color: #FAF7F7;
+  border: none;
+  color: black;
+}
+
+
+/* 2-precio */
+
+#precio{
+  position: absolute; top: 17rem; right: 58rem;
 }
 
 .btn-controles{
@@ -111,9 +126,12 @@
     position: absolute; top: 15%; right: 18rem;
 }
 
-#ordenar{
-  position: absolute; top: 10rem; right: 10rem; bottom: 2px;
+/*  3-Buscador de productos */
+
+#buscador{
+  position: relative; left: 5rem; top: 5px;
 }
+
 
 .text-muted{
   position: relative; top: 30px;
@@ -152,6 +170,7 @@
 
 #redirectCart{
   position: absolute; top: 4rem; right: 5rem;
+  margin-top: 10px;
 }
 
 
@@ -195,11 +214,6 @@
 }
 
 
-/*  BUSCADOR DE PRODUCTOS */
-
-#buscador{
-  position: relative; left: 5rem; top: 2px;
-}
 
 /* COMENTARIOS */
 

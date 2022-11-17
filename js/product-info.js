@@ -144,7 +144,7 @@ fetch(PRODUCT_INFO_COMMENTS_URL + localStorage.getItem("InfoID") + EXT_TYPE)
 })
 
 // -----------------------------------------------------------------------------------------------------------------------------//
-//Mostrar los comentarios deproducto
+//Mostrar los comentarios de producto
 // -----------------------------------------------------------------------------------------------------------------------------//
 
 
@@ -154,7 +154,7 @@ const showComments = () => {
    `
    for (let i = 0; i < dato.length; i++) {
       let comment = dato[i]
-      htmlComment += `
+         htmlComment += `
       <div id="comments" class="row g-3 comentariosT">
          <div id="card-comment">
             ${comment.user}  ${comment.dateTime} ${star[comment.score]} <br>
@@ -164,6 +164,8 @@ const showComments = () => {
    
        `
    }
+      
+
    document.getElementById("content-comment").innerHTML = htmlComment;
 }
 

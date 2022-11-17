@@ -6,8 +6,9 @@ let nombre = document.getElementById('nombreProfile').value = localStorage.getIt
 let nombre2 = document.getElementById('nombre2Profile').value = localStorage.getItem("nombreDos");
 let apellido = document.getElementById('apellidoProfile').value = localStorage.getItem("apellido");
 let apellido2 = document.getElementById('apellido2Profile').value = localStorage.getItem("apellidoDos");
-let phone = document.getElementById('phoneProfile').value = localStorage.getItem("phone");;
+let phone = document.getElementById('phoneProfile').value = localStorage.getItem("phone");
 let emailP = document.getElementById('inputProfile').value = localStorage.getItem("email");
+let avatar 
 
 
 

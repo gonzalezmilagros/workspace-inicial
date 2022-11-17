@@ -58,27 +58,40 @@
     <div class="col-md-4">
       <input type="search" id="buscador" class="form-control" class="buscadorP" placeholder="buscar" >
     </div>
-    </div>
+  </div>
+
+
+  <div id="precio">
+    <p class="price">Precio</p>
+      <input type="number" id="rango-min" placeholder="min" class="min-max">
+      <input type="number" id="rango-max" placeholder="max" class="min-max">
+
+      <button id="filtrar" class="btn-controles">Filtrar</button>
+      <button id="limpiar" class="btn-controles">Limpiar</button>
+</div>
 
   <div id="ordenar">
-    <input type="radio" id="sortPrecioDesc" class="button-orden"><label for="" class="estilo-img"><img src="img/descendente-flecha.png" alt="">$</label>
-    <input type="radio" id="sortPrecioAsc" class="button-orden"><label for="" class="estilo-img"><img src="img/ascendente-flecha.png" alt="">$</label>
-    <input type="radio" id="sortRelevDesc" class="button-orden"><label for="" class="estilo-img"><img src="img/descendente-flecha.png" alt="">Rel.</label>
+      <div class="dropdown">
+        <button class="btn btn-light dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+          Odenar por
+        </button>
+        <ul class="dropdown-menu">
+          <li><a class="dropdown-item" href="#" id="sortPrecioDesc">Mayor precio</a></li>
+          <li><a class="dropdown-item" href="#" id="sortPrecioAsc">Menor precio</a></li>
+          <li><a class="dropdown-item" href="#" id="sortRelevDesc">Mayor relevancia</a></li>
+        </ul>
+      </div>
   </div>
-    <div id="precio">
-      <p class="price">Precio</p>
-        <input type="number" id="rango-min" placeholder="min" class="min-max">
-        <input type="number" id="rango-max" placeholder="max" class="min-max">
+  
+</div>
+   
+<div id="listado">
+  <p>
+    <ul id="productos"></ul>
+  </p>
+</div>
 
-        <button id="filtrar" class="btn-controles">Filtrar</button>
-        <button id="limpiar" class="btn-controles">Limpiar</button>
-    </div>
-  </div>
-    <div id="listado">
-      <p>
-        <ul id="productos"></ul>
-      </p>
-    </div>
+
   </main>
   <footer class="text-muted">
     <div class="container">
