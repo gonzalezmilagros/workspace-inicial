@@ -100,7 +100,7 @@ let avatarP = document.getElementById('avatar');
     const img = new Image();
     img.src = url;
     document.getElementById('imgAvatar').appendChild(img);
-    console.log(img);
+    console.log(img);00
   
 
 

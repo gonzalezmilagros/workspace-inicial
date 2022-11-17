@@ -9,6 +9,7 @@ document.addEventListener("DOMContentLoaded", () => {
          listaCart = resultado.data.articles;
          cartProducts(listaCart);
 
+
   //  -----------------------------------------------------------------------------------------------------------------------------//
   //  Eventos oninputs.
   //  -----------------------------------------------------------------------------------------------------------------------------// 
@@ -351,6 +352,23 @@ document.addEventListener("DOMContentLoaded", () => {
     }  
 });
 
+// -----------------------------------------------------------------------------------------------------------------------------//
+// alertas de verificación
+// -----------------------------------------------------------------------------------------------------------------------------//
+
+
+function errorAlert(){
+   let error = document.getElementById("alerta")
+     
+     error.innerHTML = `
+     <div class="alert alert-success alert-dismissible fade show" id="alert-error" role="alert">
+           La compra ha sido exitosa!!
+     <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+     </div>`
+   }
+
+
+
 
 //  -----------------------------------------------------------------------------------------------------------------------------//
 //  VALIDACIÓN DE FORM
@@ -360,10 +378,9 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
 form.addEventListener("submit", function (e) {
-  sendForm = true
   document.getElementById("formularioValidacion").classList.add('was-validated')
-  e.preventDefault();
-  e.stopPropagation();
+    e.preventDefault();
+    e.stopPropagation();
 });
 
 
