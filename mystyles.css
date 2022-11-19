@@ -260,7 +260,7 @@
 
 /* Foto de perfil */
 
-input[type="file"] {
+/* input[type="file"] {
   display: none;
 }
 
@@ -268,17 +268,17 @@ input[type="file"] {
   border: 1px solid #ccc;
   display: inline-block;
   cursor: pointer;
-}
+} */
 
-.imgClass{
-  width: 10px;
-}
+/* .imgClass{
+  width: 100px;
+} */
 
-#perfil{
+/* #perfil{
   display:inline-block;margin-right:45rem; 
-  width:100px;
+  width:85px;
 
-} 
+}  */
 
 #imgProfile {
   display:inline-block; 

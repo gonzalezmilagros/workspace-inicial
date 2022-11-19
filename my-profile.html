@@ -60,19 +60,15 @@
     <div class="col-10" id="perfil">
       <h2>Perfil</h2>
     </div>  
-      
+
 
     <div id="imgProfile">
-      <label for="avatar" id="imgAvatar"><img src="img/perfil.jpg" alt="" id="imgProfile" ></label>
-      <input type="file"
-      id="avatar" 
-      name="avatar"
-      accept="image/png, image/jpeg"
-      >
+ 
+      <label for="avatar" id="imgAvatar"></label>
     </div>
-    <hr>
   </div>
-
+  <hr>  
+   
 
   <div class="col-5">
     <label for="">Nombre*</label>    
@@ -102,6 +98,11 @@
   <div class="col-5">
     <label for="">Teléfono de contacto*</label>
     <input type="text" class="form-control" required id="phoneProfile">
+  </div>
+
+  <div class="col-5">
+    <label for="">Seleccionar foto de perfil</label>
+    <input type="file" id="avatar" name="avatar" accept="image/png,image/jpeg" class="form-control">
   </div>
 
   <div class="col-10" id="btnGuardar">

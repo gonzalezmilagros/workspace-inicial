@@ -78,7 +78,7 @@ const phoneLS = () => {
 let avatarP = document.getElementById('avatar');
 
 
-  avatarP.addEventListener('change', () => {
+  avatarP.addEventListener('change', (event) => {
 
     const fr = new FileReader();
   
@@ -94,14 +94,17 @@ let avatarP = document.getElementById('avatar');
     });
   })
 
- 
 
+ 
     const url = localStorage.getItem("img");
 
     const img = new Image();
     img.src = url;
+
     document.getElementById('imgAvatar').appendChild(img);
-    console.log(img);00
+
+  
+    
   
 
 
@@ -110,11 +113,15 @@ let avatarP = document.getElementById('avatar');
 // -----------------------------------------------------------------------------------------------------------------------------//
 
 
-// document.addEventListener('DOMContentLoaded', () => {
-//   if( emailP = "email" in localStorage){
-//   }else { 
-//     alert('no'); }
-// })
+document.addEventListener('DOMContentLoaded', () => {
+  if ("img" == undefined) {
+    alert('noooooooo')
+  }
+  if( emailP = "email" in localStorage){
+    
+  }else { 
+    alert('no'); }
+})
 
 // -----------------------------------------------------------------------------------------------------------------------------//
 // alertas de verificación
