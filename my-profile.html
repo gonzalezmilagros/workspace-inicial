@@ -14,9 +14,9 @@
 <body>
   <script>
     if (localStorage.getItem('email') == undefined) {
-        window.location = './index.html'
+      window.location = './index.html'
     }
-</script>
+  </script>
   <nav class="navbar navbar-expand-lg navbar-dark bg-dark p-1">
     <div class="container">
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
@@ -36,7 +36,8 @@
           </li>
           <li class="nav-item">
             <div class="dropdown">
-              <button class="btn btn-dark dropdown-toggle navbar-usuario" type="button"  data-bs-toggle="dropdown" id="datos-usuario" aria-expanded="false"></button>
+              <button class="btn btn-dark dropdown-toggle navbar-usuario" type="button" data-bs-toggle="dropdown"
+                id="datos-usuario" aria-expanded="false"></button>
               <ul class="dropdown-menu bg-dark" aria-labelledby="dropdownMenuButton1">
                 <li><a id="cart" class="dropdown-item text-light" href="#">Mi carrito</a></li>
                 <li><a id="profile" class="dropdown-item text-light" href="#">Mi perfil</a></li>
@@ -49,70 +50,70 @@
     </div>
   </nav>
   <main>
-<section>
-<div class="container">
-  <div class="row align-items-start">
+    <section>
+      <div class="container">
+        <div class="row align-items-start">
 
-    <div id="alerts-profile"></div>
-
-
-  <div class="col-10">
-    <div class="col-10" id="perfil">
-      <h2>Perfil</h2>
-    </div>  
+          <div id="alerts-profile"></div>
 
 
-    <div id="imgProfile">
- 
-      <label for="avatar" id="imgAvatar"></label>
-    </div>
-  </div>
-  <hr>  
-   
+          <div class="col-10">
+            <div class="col-10" id="perfil">
+              <h2>Perfil</h2>
+            </div>
 
-  <div class="col-5">
-    <label for="">Nombre*</label>    
-    <input type="text" required class="form-control" required id="nombreProfile">
-  </div>    
+            <div id="imgProfile">
+              <label for="avatar" id="imgAvatar" class="perfil"></label>
+            </div>
 
-  <div class="col-5">
-    <label for="">Segundo nombre</label>
-    <input type="text" class="form-control" id="nombre2Profile">
-  </div>
+            <hr>
+          </div>
+          
 
-  <div class="col-5">
-    <label for="">Apellido*</label>
-    <input type="text" class="form-control" required id="apellidoProfile">
-  </div>
 
-  <div class="col-5">
-    <label for="">Segundo apellido</label>
-    <input type="text" class="form-control" required id="apellido2Profile">
-  </div> 
+          <div class="col-5">
+            <label for="">Nombre*</label>
+            <input type="text" required class="form-control" required id="nombreProfile">
+          </div>
 
-  <div class="col-5">
-    <label for=""></label>E-mail*</label>
-    <input class="form-control" value="" id="inputProfile"></input>
-  </div>
+          <div class="col-5">
+            <label for="">Segundo nombre</label>
+            <input type="text" class="form-control" id="nombre2Profile">
+          </div>
 
-  <div class="col-5">
-    <label for="">Teléfono de contacto*</label>
-    <input type="text" class="form-control" required id="phoneProfile">
-  </div>
+          <div class="col-5">
+            <label for="">Apellido*</label>
+            <input type="text" class="form-control" required id="apellidoProfile">
+          </div>
 
-  <div class="col-5">
-    <label for="">Seleccionar foto de perfil</label>
-    <input type="file" id="avatar" name="avatar" accept="image/png,image/jpeg" class="form-control">
-  </div>
+          <div class="col-5">
+            <label for="">Segundo apellido</label>
+            <input type="text" class="form-control" required id="apellido2Profile">
+          </div>
 
-  <div class="col-10" id="btnGuardar">
-    <hr><button type="button" class="btn btn-primary" id="btn-profile">Guardar</button>
-  </div>
+          <div class="col-5">
+            <label for=""></label>E-mail*</label>
+            <input class="form-control" value="" id="inputProfile"></input>
+          </div>
 
-</div>
-</div> 
+          <div class="col-5">
+            <label for="">Seleccionar foto de perfil</label>
+            <input type="file" id="avatar" name="avatar" accept="image/png,image/jpeg" class="form-control">
+          </div>
 
-</section>
+          <div class="col-5">
+            <label for="">Teléfono de contacto*</label>
+            <input type="text" class="form-control" required id="phoneProfile">
+          </div>
+
+          <div class="col-10" id="btnGuardar">
+            <hr><button type="button" class="btn btn-primary" id="btn-profile">Guardar</button>
+          </div>
+
+        </div>
+      </div>
+
+    </section>
 
 
 

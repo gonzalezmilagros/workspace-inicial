@@ -260,28 +260,17 @@
 
 /* Foto de perfil */
 
-/* input[type="file"] {
-  display: none;
-}
 
-.custom-file-upload {
-  border: 1px solid #ccc;
-  display: inline-block;
-  cursor: pointer;
-} */
 
-/* .imgClass{
-  width: 100px;
-} */
-
-/* #perfil{
+.perfil{
   display:inline-block;margin-right:45rem; 
   width:85px;
 
-}  */
+} 
 
 #imgProfile {
   display:inline-block; 
+  margin-right:45rem;
   width: 75px;
   padding-bottom: 10px;
 } 

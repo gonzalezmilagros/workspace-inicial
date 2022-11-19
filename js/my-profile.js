@@ -8,9 +8,6 @@ let apellido = document.getElementById('apellidoProfile').value = localStorage.g
 let apellido2 = document.getElementById('apellido2Profile').value = localStorage.getItem("apellidoDos");
 let phone = document.getElementById('phoneProfile').value = localStorage.getItem("phone");
 let emailP = document.getElementById('inputProfile').value = localStorage.getItem("email");
-let avatar 
-
-
 
 
 
@@ -104,24 +101,6 @@ let avatarP = document.getElementById('avatar');
     document.getElementById('imgAvatar').appendChild(img);
 
   
-    
-  
-
-
-// -----------------------------------------------------------------------------------------------------------------------------//
-// función para que cuando carga la página verifique si hay datos en el localStorage
-// -----------------------------------------------------------------------------------------------------------------------------//
-
-
-document.addEventListener('DOMContentLoaded', () => {
-  if ("img" == undefined) {
-    alert('noooooooo')
-  }
-  if( emailP = "email" in localStorage){
-    
-  }else { 
-    alert('no'); }
-})
 
 // -----------------------------------------------------------------------------------------------------------------------------//
 // alertas de verificación
