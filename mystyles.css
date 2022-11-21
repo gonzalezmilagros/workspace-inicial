@@ -141,15 +141,23 @@
 
 .product-img{
   height: 150px;
-    width: 200px;
+    width: 250px;
     float: left;
     display: flex;
     padding: 20px;
 }
 
-.img{
-  display: flex;
+.carousel{
+  height: 150px;
+    width: 200px;
+    border-bottom: 5rem;
+    top: 1rem;
+    right: 32rem;
 }
+
+/* .img{
+  display: flex;
+}  */
 
 /* COMENTARIOS DE PRODUCTOS */
 
@@ -260,8 +268,6 @@
 
 /* Foto de perfil */
 
-
-
 .perfil{
   display:inline-block;margin-right:45rem; 
   width:85px;
@@ -278,5 +284,4 @@
 #btnGuardar{
   padding-top: 20px;
 }
-
 

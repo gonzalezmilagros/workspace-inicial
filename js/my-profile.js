@@ -40,7 +40,6 @@ btnProfile.addEventListener('click', () => {
 
 const nombreLS = () => {
     let nombreL = document.getElementById('nombreProfile').value;
-    infoProfile.push(nombreL);
     localStorage.setItem('nombre', nombreL);
   }
 
