@@ -87,7 +87,7 @@
 } 
 
 #ordenar{
-  position: absolute; top: 14rem; right: 10rem; bottom: 2px;
+  position: relative; top: 3%; left: 70rem; bottom: 2px;
 }
 
 .btn-light {
