@@ -1,3 +1,12 @@
+// const CATEGORIES_URL = "http://localhost:3000/cats";
+// const PUBLISH_PRODUCT_URL = "http://localhost:3000/sell";
+// const PRODUCTS_URL = "http://localhost:3000/cats_products/";
+// const PRODUCT_INFO_URL = "http://localhost:3000/products/";
+// const PRODUCT_INFO_COMMENTS_URL = "http://localhost:3000/comments/";
+// const CART_INFO_URL = "https://japceibal.github.io/emercado-api/user_cart/";
+// const CART_BUY_URL = "http://localhost:3000/cart";
+// const EXT_TYPE = ".json";
+
 const CATEGORIES_URL = "https://japceibal.github.io/emercado-api/cats/cat.json";
 const PUBLISH_PRODUCT_URL = "https://japceibal.github.io/emercado-api/sell/publish.json";
 const PRODUCTS_URL = "https://japceibal.github.io/emercado-api/cats_products/";
@@ -6,7 +15,6 @@ const PRODUCT_INFO_COMMENTS_URL = "https://japceibal.github.io/emercado-api/prod
 const CART_INFO_URL = "https://japceibal.github.io/emercado-api/user_cart/";
 const CART_BUY_URL = "https://japceibal.github.io/emercado-api/cart/buy.json";
 const EXT_TYPE = ".json";
-
 
 // -----------------------------------------------------------------------------------------------------------------------------//
 // Mostrar spinners si la petición al fetch falla.
